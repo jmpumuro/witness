@@ -1,0 +1,44 @@
+{
+  "app": "shop",
+  "flow": "admin-product",
+  "role": "admin",
+  "start": "/admin/products",
+  "story": "An admin tries to create a product with price 0 (validation error), creates it properly, edits the price, then deletes it after confirming.",
+  "edgeCases": [
+    "codegen records dialog.dismiss() although the user accepted the confirm dialog (missing DELETE on replay)",
+    "product names are unique (409 on the second replay)",
+    "positional CSS selector for the Edit button",
+    "row-scoped button with nth(1)",
+    "validation error then correction",
+    "cookie overlay"
+  ],
+  "expect": {
+    "analysis": {
+      "divergences": [
+        {
+          "kind": "missing_request",
+          "method": "DELETE",
+          "template": "/api/products/:id"
+        }
+      ],
+      "dialogs": 1,
+      "runsFail": true,
+      "optionalSteps": {
+        "overlay-dismiss": 1,
+        "focus-before-input": 1
+      }
+    },
+    "verify": "pass",
+    "prepared": {
+      "repeatable": true,
+      "optionalSteps": {
+        "observation": 2
+      },
+      "candidatesInclude": [
+        "Price must be greater than 0",
+        "Product deleted"
+      ]
+    }
+  },
+  "mutants": {}
+}

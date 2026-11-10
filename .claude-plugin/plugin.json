@@ -1,0 +1,10 @@
+{
+  "name": "witness",
+  "version": "0.1.0",
+  "description": "Record a flow by hand in the browser; get a verified, repeatable Playwright test. Replays the recording, measures what each step did, recreates it as a clean test (TypeScript or Python), and proves fidelity, meaningful assertions and stability before handing it over.",
+  "author": { "name": "Witness contributors" },
+  "homepage": "https://github.com/jmpumuro/witness",
+  "repository": "https://github.com/jmpumuro/witness",
+  "license": "Apache-2.0",
+  "keywords": ["playwright", "codegen", "record and replay", "e2e", "integration tests", "test generation", "pytest-playwright", "testing", "qa"]
+}

@@ -1,0 +1,43 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  runtime:
+    name: Runtime tests (both languages)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: npm ci || npm install
+      - run: pip install pytest-playwright
+      - run: npm run test:runtime
+
+  evals:
+    name: End-to-end evals (${{ matrix.lang }})
+    runs-on: ubuntu-latest
+    needs: runtime
+    strategy:
+      fail-fast: false
+      matrix:
+        lang: [ts, py]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: npm ci || npm install
+      - run: npx playwright install --with-deps chromium
+      - run: pip install pytest-playwright && python -m playwright install chromium
+      - run: npm run eval -- --lang ${{ matrix.lang }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-results-${{ matrix.lang }}
+          path: evals/results/

@@ -1,0 +1,26 @@
+{
+  "app": "library",
+  "flow": "loan-status",
+  "role": "member",
+  "start": "/loans",
+  "story": "A member checks the overdue badge on a loan, then filters the catalog to books on loan.",
+  "edgeCases": [
+    "\"Overdue by N days\" depends on the current date (needs page.clock)",
+    "read-only flow (repeatable)",
+    "an assertion that looks right but is already true before the action (vacuous)"
+  ],
+  "expect": {
+    "analysis": {
+      "repeatable": true,
+      "divergences": [],
+      "timeDependent": true,
+      "candidatesInclude": [
+        "Overdue by"
+      ]
+    },
+    "verify": "pass"
+  },
+  "mutants": {
+    "vacuous-filter": "vacuity"
+  }
+}

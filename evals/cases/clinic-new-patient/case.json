@@ -1,0 +1,38 @@
+{
+  "app": "clinic",
+  "flow": "new-patient",
+  "role": "staff",
+  "start": "/patients",
+  "story": "Front desk enters a future date of birth and an invalid email, sees both errors, fixes them and saves the patient.",
+  "edgeCases": [
+    "validation errors shown inline then corrected",
+    "unique email (409 on replay)",
+    "date input",
+    "navigation to the created record"
+  ],
+  "expect": {
+    "analysis": {
+      "divergences": [
+        {
+          "kind": "state_dependent",
+          "method": "POST",
+          "template": "/api/patients"
+        }
+      ],
+      "runsFail": true
+    },
+    "verify": "pass",
+    "prepared": {
+      "repeatable": true,
+      "optionalSteps": {
+        "observation": 3
+      },
+      "candidatesInclude": [
+        "Date of birth cannot be in the future",
+        "Enter a valid email address",
+        "Patient record for Dana Whitfield"
+      ]
+    }
+  },
+  "mutants": {}
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="t">
+  <title id="t">Witness: record, replay, verified</title>
+  <rect width="120" height="120" rx="26" fill="#26215C"/>
+  <path d="M60 22 A38 38 0 1 1 22 60" fill="none" stroke="#CECBF6" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="13,64 31,64 22,51" fill="#CECBF6"/>
+  <circle cx="60" cy="22" r="8" fill="#E24B4A"/>
+  <path d="M44 60 L56 72 L78 48" fill="none" stroke="#5DCAA5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

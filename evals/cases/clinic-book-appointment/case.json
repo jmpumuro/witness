@@ -1,0 +1,38 @@
+{
+  "app": "clinic",
+  "flow": "book-appointment",
+  "role": "staff",
+  "start": "/appointments/new",
+  "story": "Front desk searches for a patient by typing, picks her from the suggestions, chooses a doctor and time, and books.",
+  "edgeCases": [
+    "autocomplete listens to keyup: fill() never opens the suggestions (missing read on replay)",
+    "slot consumed by the recording (409 on replay)",
+    "select elements",
+    "delayed toast after redirect"
+  ],
+  "expect": {
+    "analysis": {
+      "divergences": [
+        {
+          "kind": "missing_read",
+          "method": "GET",
+          "template": "/api/patients"
+        },
+        {
+          "kind": "missing_request",
+          "method": "POST",
+          "template": "/api/appointments"
+        }
+      ],
+      "runsFail": true
+    },
+    "prepared": {
+      "repeatable": true,
+      "candidatesInclude": [
+        "Appointment booked"
+      ]
+    },
+    "verify": "pass"
+  },
+  "mutants": {}
+}

@@ -1,0 +1,17 @@
+{
+  "name": "witness-dev",
+  "private": true,
+  "description": "Development workspace for the Witness plugin: demo apps, eval harness and runtime tests.",
+  "scripts": {
+    "apps": "node evals/apps.mjs",
+    "eval": "node evals/run.mjs",
+    "eval:ts": "node evals/run.mjs --lang ts",
+    "eval:py": "node evals/run.mjs --lang py",
+    "test:runtime": "node --test skills/witness/runtime/node/test/*.test.mjs && cd skills/witness/runtime/python && python3 -m pytest -q -p no:cacheprovider tests",
+    "conformance": "node skills/witness/runtime/conformance/generate.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "typescript": "^5"
+  }
+}

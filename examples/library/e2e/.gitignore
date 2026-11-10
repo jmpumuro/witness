@@ -1,0 +1,6 @@
+playwright/.auth/
+test-results/
+playwright-report/
+# Witness: raw recordings may contain personal data; run artifacts are disposable
+.witness/recordings/
+.witness/tmp/

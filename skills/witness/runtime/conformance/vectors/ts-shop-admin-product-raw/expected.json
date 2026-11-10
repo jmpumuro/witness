@@ -1,0 +1,3336 @@
+{
+ "analysis": {
+  "version": 1,
+  "flow": "admin-product",
+  "runs": [
+   {
+    "run": 1,
+    "status": "failed",
+    "error": "TimeoutError: locator.call: Timeout 15000ms exceeded.\nCall log:\n  - waiting for getByText('Product deleted')\n",
+    "failedStep": 14
+   }
+  ],
+  "repeatable": false,
+  "steps": [
+   {
+    "index": 0,
+    "method": "goto",
+    "class": "nav",
+    "kind": "action",
+    "value": "http://localhost:4101/admin/products",
+    "recordedLocator": "page",
+    "target": null,
+    "locator": null,
+    "candidates": [],
+    "effects": {
+     "added": 67,
+     "removed": 0,
+     "urlChanged": true,
+     "urlAfter": "http://localhost:4101/admin/products",
+     "requests": [
+      "GET /admin/products 200",
+      "GET /api/products 200"
+     ],
+     "dialogs": []
+    },
+    "settleMs": 241,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 1,
+    "method": "click",
+    "class": "click",
+    "kind": "action",
+    "recordedLocator": "getByRole('button', { name: 'Accept' })",
+    "target": {
+     "role": "button",
+     "name": "Accept",
+     "ariaLine": "- button \"Accept\"",
+     "testId": null,
+     "label": null,
+     "containerRole": "dialog",
+     "containerText": null,
+     "tag": "button",
+     "text": null
+    },
+    "locator": {
+     "kind": "role",
+     "code": "getByRole('button', { name: 'Accept', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('button', { name: 'Accept', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "text",
+      "code": "getByText('Accept', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 0,
+     "removed": 4,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/admin/products",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": "overlay-dismiss"
+   },
+   {
+    "index": 2,
+    "method": "click",
+    "class": "click",
+    "kind": "observation",
+    "recordedLocator": "getByRole('textbox', { name: 'Product name' })",
+    "target": {
+     "role": "textbox",
+     "name": "Product name",
+     "ariaLine": "- textbox \"Product name\"",
+     "testId": null,
+     "label": "Product name",
+     "containerRole": "form",
+     "containerText": null,
+     "tag": "input",
+     "text": null
+    },
+    "locator": {
+     "kind": "role",
+     "code": "getByRole('textbox', { name: 'Product name', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('textbox', { name: 'Product name', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "label",
+      "code": "getByLabel('Product name', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 0,
+     "removed": 0,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/admin/products",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": "focus-before-input"
+   },
+   {
+    "index": 3,
+    "method": "fill",
+    "class": "input",
+    "kind": "action",
+    "value": "Standing Desk",
+    "recordedLocator": "getByRole('textbox', { name: 'Product name' })",
+    "target": {
+     "role": "textbox",
+     "name": "Product name",
+     "ariaLine": "- textbox \"Product name\"",
+     "testId": null,
+     "label": "Product name",
+     "containerRole": "form",
+     "containerText": null,
+     "tag": "input",
+     "text": null
+    },
+    "locator": {
+     "kind": "role",
+     "code": "getByRole('textbox', { name: 'Product name', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('textbox', { name: 'Product name', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "label",
+      "code": "getByLabel('Product name', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 1,
+     "removed": 1,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/admin/products",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 4,
+    "method": "fill",
+    "class": "input",
+    "kind": "action",
+    "value": "0",
+    "recordedLocator": "getByRole('textbox', { name: 'Price (USD)' })",
+    "target": {
+     "role": "textbox",
+     "name": "Price (USD)",
+     "ariaLine": "- textbox \"Price (USD)\"",
+     "testId": null,
+     "label": "Price (USD)",
+     "containerRole": "form",
+     "containerText": null,
+     "tag": "input",
+     "text": null
+    },
+    "locator": {
+     "kind": "role",
+     "code": "getByRole('textbox', { name: 'Price (USD)', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('textbox', { name: 'Price (USD)', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "label",
+      "code": "getByLabel('Price (USD)', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 1,
+     "removed": 1,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/admin/products",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 5,
+    "method": "click",
+    "class": "click",
+    "kind": "action",
+    "recordedLocator": "getByRole('button', { name: 'Create product' })",
+    "target": {
+     "role": "button",
+     "name": "Create product",
+     "ariaLine": "- button \"Create product\"",
+     "testId": null,
+     "label": null,
+     "containerRole": "form",
+     "containerText": null,
+     "tag": "button",
+     "text": null
+    },
+    "locator": {
+     "kind": "role",
+     "code": "getByRole('button', { name: 'Create product', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('button', { name: 'Create product', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "text",
+      "code": "getByText('Create product', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 1,
+     "removed": 1,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/admin/products",
+     "requests": [
+      "POST /api/products 400"
+     ],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 6,
+    "method": "click",
+    "class": "click",
+    "kind": "observation",
+    "recordedLocator": "getByText('Price must be greater than 0')",
+    "target": {
+     "role": "alert",
+     "name": null,
+     "ariaLine": "- alert: Price must be greater than 0",
+     "testId": null,
+     "label": null,
+     "containerRole": "form",
+     "containerText": null,
+     "tag": "p",
+     "text": "Price must be greater than 0"
+    },
+    "locator": {
+     "kind": "role-unnamed",
+     "code": "getByRole('alert')",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('alert')",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "text",
+      "code": "getByText('Price must be greater than 0', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 0,
+     "removed": 0,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/admin/products",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": "observation"
+   },
+   {
+    "index": 7,
+    "method": "fill",
+    "class": "input",
+    "kind": "action",
+    "value": "349.00",
+    "recordedLocator": "getByRole('textbox', { name: 'Price (USD)' })",
+    "target": {
+     "role": "textbox",
+     "name": "Price (USD)",
+     "ariaLine": "- textbox \"Price (USD)\": \"0\"",
+     "testId": null,
+     "label": "Price (USD)",
+     "containerRole": "form",
+     "containerText": null,
+     "tag": "input",
+     "text": "\"0\""
+    },
+    "locator": {
+     "kind": "role",
+     "code": "getByRole('textbox', { name: 'Price (USD)', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('textbox', { name: 'Price (USD)', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "label",
+      "code": "getByLabel('Price (USD)', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 1,
+     "removed": 1,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/admin/products",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 8,
+    "method": "fill",
+    "class": "input",
+    "kind": "action",
+    "value": "4",
+    "recordedLocator": "getByRole('spinbutton', { name: 'Stock' })",
+    "target": {
+     "role": "spinbutton",
+     "name": "Stock",
+     "ariaLine": "- spinbutton \"Stock\"",
+     "testId": null,
+     "label": "Stock",
+     "containerRole": "form",
+     "containerText": null,
+     "tag": "input",
+     "text": null
+    },
+    "locator": {
+     "kind": "role",
+     "code": "getByRole('spinbutton', { name: 'Stock', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('spinbutton', { name: 'Stock', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "label",
+      "code": "getByLabel('Stock', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 1,
+     "removed": 1,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/admin/products",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 9,
+    "method": "click",
+    "class": "click",
+    "kind": "action",
+    "recordedLocator": "getByRole('button', { name: 'Create product' })",
+    "target": {
+     "role": "button",
+     "name": "Create product",
+     "ariaLine": "- button \"Create product\"",
+     "testId": null,
+     "label": null,
+     "containerRole": "form",
+     "containerText": null,
+     "tag": "button",
+     "text": null
+    },
+    "locator": {
+     "kind": "role",
+     "code": "getByRole('button', { name: 'Create product', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('button', { name: 'Create product', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "text",
+      "code": "getByText('Create product', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 12,
+     "removed": 4,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/admin/products",
+     "requests": [
+      "POST /api/products 201",
+      "GET /api/products 200"
+     ],
+     "dialogs": []
+    },
+    "settleMs": 109,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 10,
+    "method": "click",
+    "class": "click",
+    "kind": "action",
+    "recordedLocator": "locator('tr:nth-child(6) > td:nth-child(4) > button').first()",
+    "target": {
+     "role": "button",
+     "name": "Edit",
+     "ariaLine": "- button \"Edit\"",
+     "testId": null,
+     "label": null,
+     "containerRole": "row",
+     "containerText": "Standing Desk",
+     "tag": "button",
+     "text": null
+    },
+    "locator": {
+     "kind": "scoped-role",
+     "code": "getByRole('row').filter({ hasText: 'Standing Desk' }).getByRole('button', { name: 'Edit', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('button', { name: 'Edit', exact: true })",
+      "count": 6,
+      "matchesTarget": false
+     },
+     {
+      "kind": "text",
+      "code": "getByText('Edit', { exact: true })",
+      "count": 6,
+      "matchesTarget": false
+     },
+     {
+      "kind": "scoped-role",
+      "code": "getByRole('row').filter({ hasText: 'Standing Desk' }).getByRole('button', { name: 'Edit', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 6,
+     "removed": 5,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/admin/products",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 11,
+    "method": "fill",
+    "class": "input",
+    "kind": "action",
+    "value": "329.00",
+    "recordedLocator": "getByRole('textbox', { name: 'Price (USD)' })",
+    "target": {
+     "role": "textbox",
+     "name": "Price (USD)",
+     "ariaLine": "- textbox \"Price (USD)\": \"349.00\"",
+     "testId": null,
+     "label": "Price (USD)",
+     "containerRole": "form",
+     "containerText": null,
+     "tag": "input",
+     "text": "\"349.00\""
+    },
+    "locator": {
+     "kind": "role",
+     "code": "getByRole('textbox', { name: 'Price (USD)', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('textbox', { name: 'Price (USD)', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "label",
+      "code": "getByLabel('Price (USD)', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 1,
+     "removed": 1,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/admin/products",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 12,
+    "method": "click",
+    "class": "click",
+    "kind": "action",
+    "recordedLocator": "getByRole('button', { name: 'Save changes' })",
+    "target": {
+     "role": "button",
+     "name": "Save changes",
+     "ariaLine": "- button \"Save changes\"",
+     "testId": null,
+     "label": null,
+     "containerRole": "form",
+     "containerText": null,
+     "tag": "button",
+     "text": null
+    },
+    "locator": {
+     "kind": "role",
+     "code": "getByRole('button', { name: 'Save changes', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('button', { name: 'Save changes', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "text",
+      "code": "getByText('Save changes', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 13,
+     "removed": 14,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/admin/products",
+     "requests": [
+      "PUT /api/products/:id 200",
+      "GET /api/products 200"
+     ],
+     "dialogs": []
+    },
+    "settleMs": 109,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 13,
+    "method": "click",
+    "class": "click",
+    "kind": "action",
+    "recordedLocator": "getByRole('row', { name: 'Standing Desk $329.00 4 Edit Delete' }).getByRole('button').nth(1)",
+    "target": {
+     "role": "button",
+     "name": "Delete",
+     "ariaLine": "- button \"Delete\"",
+     "testId": null,
+     "label": null,
+     "containerRole": "row",
+     "containerText": "Standing Desk",
+     "tag": "button",
+     "text": null
+    },
+    "locator": {
+     "kind": "scoped-role",
+     "code": "getByRole('row').filter({ hasText: 'Standing Desk' }).getByRole('button', { name: 'Delete', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('button', { name: 'Delete', exact: true })",
+      "count": 6,
+      "matchesTarget": false
+     },
+     {
+      "kind": "text",
+      "code": "getByText('Delete', { exact: true })",
+      "count": 6,
+      "matchesTarget": false
+     },
+     {
+      "kind": "scoped-role",
+      "code": "getByRole('row').filter({ hasText: 'Standing Desk' }).getByRole('button', { name: 'Delete', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 0,
+     "removed": 0,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/admin/products",
+     "requests": [],
+     "dialogs": [
+      "confirm: Delete Standing Desk?"
+     ]
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 14,
+    "method": "click",
+    "class": "click",
+    "kind": "observation",
+    "recordedLocator": "getByText('Product deleted')",
+    "target": {
+     "role": null,
+     "name": null,
+     "ariaLine": null,
+     "testId": null,
+     "label": null,
+     "containerRole": null,
+     "containerText": null,
+     "tag": null,
+     "text": null
+    },
+    "locator": null,
+    "candidates": [],
+    "effects": {
+     "added": 0,
+     "removed": 0,
+     "urlChanged": false,
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": null,
+    "delayedEffect": false,
+    "error": "locator.call: Timeout 15000ms exceeded. Call log:   - waiting for getByText('Product deleted')",
+    "optional": "observation"
+   }
+  ],
+  "checkpointCandidates": [
+   {
+    "id": "c60",
+    "step": 5,
+    "type": "appeared",
+    "line": "- alert: Price must be greater than 0",
+    "path": [
+     "- main"
+    ],
+    "role": "alert",
+    "name": null,
+    "text": "Price must be greater than 0",
+    "onLoad": false,
+    "inFinal": false,
+    "attended": true,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 5
+   },
+   {
+    "id": "c61",
+    "step": 5,
+    "type": "disappeared",
+    "line": "- alert",
+    "path": [
+     "- main"
+    ],
+    "role": "alert",
+    "name": null,
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 2
+   },
+   {
+    "id": "c73",
+    "step": 9,
+    "type": "appeared",
+    "line": "- status: Product created",
+    "path": [],
+    "role": "status",
+    "name": null,
+    "text": "Product created",
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 2
+   },
+   {
+    "id": "c77",
+    "step": 9,
+    "type": "disappeared",
+    "line": "- alert: Price must be greater than 0",
+    "path": [
+     "- main"
+    ],
+    "role": "alert",
+    "name": null,
+    "text": "Price must be greater than 0",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 2
+   },
+   {
+    "id": "c90",
+    "step": 12,
+    "type": "appeared",
+    "line": "- heading \"New product\" [level=2]",
+    "path": [
+     "- main"
+    ],
+    "role": "heading",
+    "name": "New product",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 2
+   },
+   {
+    "id": "c102",
+    "step": 12,
+    "type": "appeared",
+    "line": "- status: Product updated",
+    "path": [],
+    "role": "status",
+    "name": null,
+    "text": "Product updated",
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 2
+   },
+   {
+    "id": "c116",
+    "step": 12,
+    "type": "disappeared",
+    "line": "- status: Product created",
+    "path": [],
+    "role": "status",
+    "name": null,
+    "text": "Product created",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 2
+   },
+   {
+    "id": "c63",
+    "step": 9,
+    "type": "appeared",
+    "line": "- textbox \"Product name\"",
+    "path": [
+     "- main"
+    ],
+    "role": "textbox",
+    "name": "Product name",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c64",
+    "step": 9,
+    "type": "appeared",
+    "line": "- textbox \"Price (USD)\"",
+    "path": [
+     "- main"
+    ],
+    "role": "textbox",
+    "name": "Price (USD)",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c65",
+    "step": 9,
+    "type": "appeared",
+    "line": "- spinbutton \"Stock\"",
+    "path": [
+     "- main"
+    ],
+    "role": "spinbutton",
+    "name": "Stock",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c67",
+    "step": 9,
+    "type": "appeared",
+    "line": "- cell \"Standing Desk\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $349.00 4 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "Standing Desk",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c69",
+    "step": 9,
+    "type": "appeared",
+    "line": "- cell \"4\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $349.00 4 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "4",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c70",
+    "step": 9,
+    "type": "appeared",
+    "line": "- cell \"Edit Delete\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $349.00 4 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "Edit Delete",
+    "text": "",
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c71",
+    "step": 9,
+    "type": "appeared",
+    "line": "- button \"Edit\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $349.00 4 Edit Delete\"",
+     "- cell \"Edit Delete\""
+    ],
+    "role": "button",
+    "name": "Edit",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c72",
+    "step": 9,
+    "type": "appeared",
+    "line": "- button \"Delete\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $349.00 4 Edit Delete\"",
+     "- cell \"Edit Delete\""
+    ],
+    "role": "button",
+    "name": "Delete",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c79",
+    "step": 10,
+    "type": "appeared",
+    "line": "- heading \"Edit Standing Desk\" [level=2]",
+    "path": [
+     "- main"
+    ],
+    "role": "heading",
+    "name": "Edit Standing Desk",
+    "text": null,
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c85",
+    "step": 10,
+    "type": "disappeared",
+    "line": "- heading \"New product\" [level=2]",
+    "path": [
+     "- main"
+    ],
+    "role": "heading",
+    "name": "New product",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c91",
+    "step": 12,
+    "type": "appeared",
+    "line": "- textbox \"Product name\"",
+    "path": [
+     "- main"
+    ],
+    "role": "textbox",
+    "name": "Product name",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c92",
+    "step": 12,
+    "type": "appeared",
+    "line": "- textbox \"Price (USD)\"",
+    "path": [
+     "- main"
+    ],
+    "role": "textbox",
+    "name": "Price (USD)",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c93",
+    "step": 12,
+    "type": "appeared",
+    "line": "- spinbutton \"Stock\"",
+    "path": [
+     "- main"
+    ],
+    "role": "spinbutton",
+    "name": "Stock",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c94",
+    "step": 12,
+    "type": "appeared",
+    "line": "- button \"Create product\"",
+    "path": [
+     "- main"
+    ],
+    "role": "button",
+    "name": "Create product",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c95",
+    "step": 12,
+    "type": "appeared",
+    "line": "- row \"Standing Desk $329.00 4 Edit Delete\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup"
+    ],
+    "role": "row",
+    "name": "Standing Desk $329.00 4 Edit Delete",
+    "text": "",
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c96",
+    "step": 12,
+    "type": "appeared",
+    "line": "- cell \"Standing Desk\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $329.00 4 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "Standing Desk",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c97",
+    "step": 12,
+    "type": "appeared",
+    "line": "- cell \"$329.00\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $329.00 4 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "$329.00",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c98",
+    "step": 12,
+    "type": "appeared",
+    "line": "- cell \"4\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $329.00 4 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "4",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c99",
+    "step": 12,
+    "type": "appeared",
+    "line": "- cell \"Edit Delete\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $329.00 4 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "Edit Delete",
+    "text": "",
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c100",
+    "step": 12,
+    "type": "appeared",
+    "line": "- button \"Edit\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $329.00 4 Edit Delete\"",
+     "- cell \"Edit Delete\""
+    ],
+    "role": "button",
+    "name": "Edit",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c101",
+    "step": 12,
+    "type": "appeared",
+    "line": "- button \"Delete\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $329.00 4 Edit Delete\"",
+     "- cell \"Edit Delete\""
+    ],
+    "role": "button",
+    "name": "Delete",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c103",
+    "step": 12,
+    "type": "disappeared",
+    "line": "- heading \"Edit Standing Desk\" [level=2]",
+    "path": [
+     "- main"
+    ],
+    "role": "heading",
+    "name": "Edit Standing Desk",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 1
+   },
+   {
+    "id": "c6",
+    "step": 0,
+    "type": "appeared",
+    "line": "- heading \"Products admin\" [level=1]",
+    "path": [
+     "- main"
+    ],
+    "role": "heading",
+    "name": "Products admin",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c7",
+    "step": 0,
+    "type": "appeared",
+    "line": "- heading \"New product\" [level=2]",
+    "path": [
+     "- main"
+    ],
+    "role": "heading",
+    "name": "New product",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c66",
+    "step": 9,
+    "type": "appeared",
+    "line": "- row \"Standing Desk $349.00 4 Edit Delete\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup"
+    ],
+    "role": "row",
+    "name": "Standing Desk $349.00 4 Edit Delete",
+    "text": "",
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c68",
+    "step": 9,
+    "type": "appeared",
+    "line": "- cell \"$349.00\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $349.00 4 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "$349.00",
+    "text": null,
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c74",
+    "step": 9,
+    "type": "disappeared",
+    "line": "- textbox \"Product name\": Standing Desk",
+    "path": [
+     "- main"
+    ],
+    "role": "textbox",
+    "name": "Product name",
+    "text": "Standing Desk",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c75",
+    "step": 9,
+    "type": "disappeared",
+    "line": "- textbox \"Price (USD)\": \"349.00\"",
+    "path": [
+     "- main"
+    ],
+    "role": "textbox",
+    "name": "Price (USD)",
+    "text": "\"349.00\"",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c76",
+    "step": 9,
+    "type": "disappeared",
+    "line": "- spinbutton \"Stock\": \"4\"",
+    "path": [
+     "- main"
+    ],
+    "role": "spinbutton",
+    "name": "Stock",
+    "text": "\"4\"",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c78",
+    "step": 9,
+    "type": "request",
+    "line": "POST /api/products → 201",
+    "method": "POST",
+    "template": "/api/products",
+    "status": 201,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": null,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c80",
+    "step": 10,
+    "type": "appeared",
+    "line": "- textbox \"Product name\": Standing Desk",
+    "path": [
+     "- main"
+    ],
+    "role": "textbox",
+    "name": "Product name",
+    "text": "Standing Desk",
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c81",
+    "step": 10,
+    "type": "appeared",
+    "line": "- textbox \"Price (USD)\": \"349.00\"",
+    "path": [
+     "- main"
+    ],
+    "role": "textbox",
+    "name": "Price (USD)",
+    "text": "\"349.00\"",
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c82",
+    "step": 10,
+    "type": "appeared",
+    "line": "- spinbutton \"Stock\": \"4\"",
+    "path": [
+     "- main"
+    ],
+    "role": "spinbutton",
+    "name": "Stock",
+    "text": "\"4\"",
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c83",
+    "step": 10,
+    "type": "appeared",
+    "line": "- button \"Save changes\"",
+    "path": [
+     "- main"
+    ],
+    "role": "button",
+    "name": "Save changes",
+    "text": null,
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c84",
+    "step": 10,
+    "type": "appeared",
+    "line": "- button \"Cancel\"",
+    "path": [
+     "- main"
+    ],
+    "role": "button",
+    "name": "Cancel",
+    "text": null,
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c86",
+    "step": 10,
+    "type": "disappeared",
+    "line": "- textbox \"Product name\"",
+    "path": [
+     "- main"
+    ],
+    "role": "textbox",
+    "name": "Product name",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c87",
+    "step": 10,
+    "type": "disappeared",
+    "line": "- textbox \"Price (USD)\"",
+    "path": [
+     "- main"
+    ],
+    "role": "textbox",
+    "name": "Price (USD)",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c88",
+    "step": 10,
+    "type": "disappeared",
+    "line": "- spinbutton \"Stock\"",
+    "path": [
+     "- main"
+    ],
+    "role": "spinbutton",
+    "name": "Stock",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c89",
+    "step": 10,
+    "type": "disappeared",
+    "line": "- button \"Create product\"",
+    "path": [
+     "- main"
+    ],
+    "role": "button",
+    "name": "Create product",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c104",
+    "step": 12,
+    "type": "disappeared",
+    "line": "- textbox \"Product name\": Standing Desk",
+    "path": [
+     "- main"
+    ],
+    "role": "textbox",
+    "name": "Product name",
+    "text": "Standing Desk",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c105",
+    "step": 12,
+    "type": "disappeared",
+    "line": "- textbox \"Price (USD)\": \"329.00\"",
+    "path": [
+     "- main"
+    ],
+    "role": "textbox",
+    "name": "Price (USD)",
+    "text": "\"329.00\"",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c106",
+    "step": 12,
+    "type": "disappeared",
+    "line": "- spinbutton \"Stock\": \"4\"",
+    "path": [
+     "- main"
+    ],
+    "role": "spinbutton",
+    "name": "Stock",
+    "text": "\"4\"",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c107",
+    "step": 12,
+    "type": "disappeared",
+    "line": "- button \"Save changes\"",
+    "path": [
+     "- main"
+    ],
+    "role": "button",
+    "name": "Save changes",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c108",
+    "step": 12,
+    "type": "disappeared",
+    "line": "- button \"Cancel\"",
+    "path": [
+     "- main"
+    ],
+    "role": "button",
+    "name": "Cancel",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c109",
+    "step": 12,
+    "type": "disappeared",
+    "line": "- row \"Standing Desk $349.00 4 Edit Delete\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup"
+    ],
+    "role": "row",
+    "name": "Standing Desk $349.00 4 Edit Delete",
+    "text": "",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c110",
+    "step": 12,
+    "type": "disappeared",
+    "line": "- cell \"Standing Desk\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $349.00 4 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "Standing Desk",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c111",
+    "step": 12,
+    "type": "disappeared",
+    "line": "- cell \"$349.00\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $349.00 4 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "$349.00",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c112",
+    "step": 12,
+    "type": "disappeared",
+    "line": "- cell \"4\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $349.00 4 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "4",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c113",
+    "step": 12,
+    "type": "disappeared",
+    "line": "- cell \"Edit Delete\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $349.00 4 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "Edit Delete",
+    "text": "",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c114",
+    "step": 12,
+    "type": "disappeared",
+    "line": "- button \"Edit\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $349.00 4 Edit Delete\"",
+     "- cell \"Edit Delete\""
+    ],
+    "role": "button",
+    "name": "Edit",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c115",
+    "step": 12,
+    "type": "disappeared",
+    "line": "- button \"Delete\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Standing Desk $349.00 4 Edit Delete\"",
+     "- cell \"Edit Delete\""
+    ],
+    "role": "button",
+    "name": "Delete",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 109,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c117",
+    "step": 12,
+    "type": "request",
+    "line": "PUT /api/products/:id → 200",
+    "method": "PUT",
+    "template": "/api/products/:id",
+    "status": 200,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": null,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": 0
+   },
+   {
+    "id": "c1",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: Northwind Shop",
+    "path": [
+     "- banner"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Northwind Shop",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c2",
+    "step": 0,
+    "type": "appeared",
+    "line": "- link \"Products admin\":",
+    "path": [
+     "- banner",
+     "- navigation"
+    ],
+    "role": "link",
+    "name": "Products admin",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c3",
+    "step": 0,
+    "type": "appeared",
+    "line": "- link \"Storefront\":",
+    "path": [
+     "- banner",
+     "- navigation"
+    ],
+    "role": "link",
+    "name": "Storefront",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c4",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: Sam Admin",
+    "path": [
+     "- banner"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Sam Admin",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c5",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Sign out\"",
+    "path": [
+     "- banner"
+    ],
+    "role": "button",
+    "name": "Sign out",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c8",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: Product name",
+    "path": [
+     "- main"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Product name",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c9",
+    "step": 0,
+    "type": "appeared",
+    "line": "- textbox \"Product name\"",
+    "path": [
+     "- main"
+    ],
+    "role": "textbox",
+    "name": "Product name",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c10",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: Price (USD)",
+    "path": [
+     "- main"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Price (USD)",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c11",
+    "step": 0,
+    "type": "appeared",
+    "line": "- textbox \"Price (USD)\"",
+    "path": [
+     "- main"
+    ],
+    "role": "textbox",
+    "name": "Price (USD)",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c12",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: Stock",
+    "path": [
+     "- main"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Stock",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c13",
+    "step": 0,
+    "type": "appeared",
+    "line": "- spinbutton \"Stock\"",
+    "path": [
+     "- main"
+    ],
+    "role": "spinbutton",
+    "name": "Stock",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c14",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Create product\"",
+    "path": [
+     "- main"
+    ],
+    "role": "button",
+    "name": "Create product",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c15",
+    "step": 0,
+    "type": "appeared",
+    "line": "- table \"Products\":",
+    "path": [
+     "- main"
+    ],
+    "role": "table",
+    "name": "Products",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c16",
+    "step": 0,
+    "type": "appeared",
+    "line": "- row \"Name Price Stock Actions\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup"
+    ],
+    "role": "row",
+    "name": "Name Price Stock Actions",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c17",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Name\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Name Price Stock Actions\""
+    ],
+    "role": "cell",
+    "name": "Name",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c18",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Price\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Name Price Stock Actions\""
+    ],
+    "role": "cell",
+    "name": "Price",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c19",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Stock\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Name Price Stock Actions\""
+    ],
+    "role": "cell",
+    "name": "Stock",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c20",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Actions\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Name Price Stock Actions\""
+    ],
+    "role": "cell",
+    "name": "Actions",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c21",
+    "step": 0,
+    "type": "appeared",
+    "line": "- row \"Desk Lamp $50.00 10 Edit Delete\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup"
+    ],
+    "role": "row",
+    "name": "Desk Lamp $50.00 10 Edit Delete",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c22",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Desk Lamp\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Desk Lamp $50.00 10 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "Desk Lamp",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c23",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"$50.00\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Desk Lamp $50.00 10 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "$50.00",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c24",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"10\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Desk Lamp $50.00 10 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "10",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c25",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Edit Delete\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Desk Lamp $50.00 10 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "Edit Delete",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c26",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Edit\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Desk Lamp $50.00 10 Edit Delete\"",
+     "- cell \"Edit Delete\""
+    ],
+    "role": "button",
+    "name": "Edit",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c27",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Delete\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Desk Lamp $50.00 10 Edit Delete\"",
+     "- cell \"Edit Delete\""
+    ],
+    "role": "button",
+    "name": "Delete",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c28",
+    "step": 0,
+    "type": "appeared",
+    "line": "- row \"Notebook $8.00 100 Edit Delete\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup"
+    ],
+    "role": "row",
+    "name": "Notebook $8.00 100 Edit Delete",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c29",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Notebook\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Notebook $8.00 100 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "Notebook",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c30",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"$8.00\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Notebook $8.00 100 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "$8.00",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c31",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"100\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Notebook $8.00 100 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "100",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c32",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Edit Delete\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Notebook $8.00 100 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "Edit Delete",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c33",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Edit\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Notebook $8.00 100 Edit Delete\"",
+     "- cell \"Edit Delete\""
+    ],
+    "role": "button",
+    "name": "Edit",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c34",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Delete\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Notebook $8.00 100 Edit Delete\"",
+     "- cell \"Edit Delete\""
+    ],
+    "role": "button",
+    "name": "Delete",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c35",
+    "step": 0,
+    "type": "appeared",
+    "line": "- row \"Monitor Arm $120.00 0 Edit Delete\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup"
+    ],
+    "role": "row",
+    "name": "Monitor Arm $120.00 0 Edit Delete",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c36",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Monitor Arm\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Monitor Arm $120.00 0 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "Monitor Arm",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c37",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"$120.00\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Monitor Arm $120.00 0 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "$120.00",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c38",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"0\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Monitor Arm $120.00 0 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "0",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c39",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Edit Delete\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Monitor Arm $120.00 0 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "Edit Delete",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c40",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Edit\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Monitor Arm $120.00 0 Edit Delete\"",
+     "- cell \"Edit Delete\""
+    ],
+    "role": "button",
+    "name": "Edit",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c41",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Delete\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Monitor Arm $120.00 0 Edit Delete\"",
+     "- cell \"Edit Delete\""
+    ],
+    "role": "button",
+    "name": "Delete",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c42",
+    "step": 0,
+    "type": "appeared",
+    "line": "- row \"Desk Mat $25.00 25 Edit Delete\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup"
+    ],
+    "role": "row",
+    "name": "Desk Mat $25.00 25 Edit Delete",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c43",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Desk Mat\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Desk Mat $25.00 25 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "Desk Mat",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c44",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"$25.00\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Desk Mat $25.00 25 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "$25.00",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c45",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"25\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Desk Mat $25.00 25 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "25",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c46",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Edit Delete\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Desk Mat $25.00 25 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "Edit Delete",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c47",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Edit\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Desk Mat $25.00 25 Edit Delete\"",
+     "- cell \"Edit Delete\""
+    ],
+    "role": "button",
+    "name": "Edit",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c48",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Delete\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Desk Mat $25.00 25 Edit Delete\"",
+     "- cell \"Edit Delete\""
+    ],
+    "role": "button",
+    "name": "Delete",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c49",
+    "step": 0,
+    "type": "appeared",
+    "line": "- row \"Cable Tray $18.00 12 Edit Delete\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup"
+    ],
+    "role": "row",
+    "name": "Cable Tray $18.00 12 Edit Delete",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c50",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Cable Tray\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Cable Tray $18.00 12 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "Cable Tray",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c51",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"$18.00\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Cable Tray $18.00 12 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "$18.00",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c52",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"12\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Cable Tray $18.00 12 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "12",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c53",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Edit Delete\":",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Cable Tray $18.00 12 Edit Delete\""
+    ],
+    "role": "cell",
+    "name": "Edit Delete",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c54",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Edit\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Cable Tray $18.00 12 Edit Delete\"",
+     "- cell \"Edit Delete\""
+    ],
+    "role": "button",
+    "name": "Edit",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c55",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Delete\"",
+    "path": [
+     "- main",
+     "- table \"Products\"",
+     "- rowgroup",
+     "- row \"Cable Tray $18.00 12 Edit Delete\"",
+     "- cell \"Edit Delete\""
+    ],
+    "role": "button",
+    "name": "Delete",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c62",
+    "step": 5,
+    "type": "request",
+    "line": "POST /api/products → 400",
+    "method": "POST",
+    "template": "/api/products",
+    "status": 400,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": null,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -1
+   },
+   {
+    "id": "c56",
+    "step": 0,
+    "type": "appeared",
+    "line": "- dialog \"Cookie consent\":",
+    "path": [],
+    "role": "dialog",
+    "name": "Cookie consent",
+    "text": "",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -2
+   },
+   {
+    "id": "c57",
+    "step": 0,
+    "type": "appeared",
+    "line": "- paragraph: We use cookies to keep you signed in and to remember your cart.",
+    "path": [
+     "- dialog \"Cookie consent\""
+    ],
+    "role": "paragraph",
+    "name": null,
+    "text": "We use cookies to keep you signed in and to remember your cart.",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -2
+   },
+   {
+    "id": "c58",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Accept\"",
+    "path": [
+     "- dialog \"Cookie consent\""
+    ],
+    "role": "button",
+    "name": "Accept",
+    "text": null,
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -2
+   },
+   {
+    "id": "c59",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Reject non-essential\"",
+    "path": [
+     "- dialog \"Cookie consent\""
+    ],
+    "role": "button",
+    "name": "Reject non-essential",
+    "text": null,
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 241,
+    "timeLike": false,
+    "stability": "unknown",
+    "score": -2
+   }
+  ],
+  "divergences": [
+   {
+    "kind": "missing_request",
+    "against": "recording",
+    "method": "DELETE",
+    "template": "/api/products/:id",
+    "recordedStatus": 200
+   }
+  ],
+  "dialogs": [
+   {
+    "step": 13,
+    "type": "confirm",
+    "message": "Delete Standing Desk?"
+   }
+  ],
+  "overlays": [
+   {
+    "dialog": "- dialog \"Cookie consent\":",
+    "dismissedAt": 1,
+    "using": "getByRole('button', { name: 'Accept', exact: true })"
+   }
+  ],
+  "timeDependent": [],
+  "api": [
+   {
+    "step": 5,
+    "method": "POST",
+    "path": "/api/products",
+    "template": "/api/products",
+    "status": 400,
+    "requestBody": "{\"name\":\"Standing Desk\",\"price\":\"0\",\"stock\":\"\"}",
+    "responseExcerpt": "{\"error\":\"Price must be greater than 0\"}"
+   },
+   {
+    "step": 9,
+    "method": "POST",
+    "path": "/api/products",
+    "template": "/api/products",
+    "status": 201,
+    "requestBody": "{\"name\":\"Standing Desk\",\"price\":\"349.00\",\"stock\":\"4\"}",
+    "responseExcerpt": "{\"id\":6,\"name\":\"Standing Desk\",\"priceCents\":34900,\"stock\":4}"
+   },
+   {
+    "step": 12,
+    "method": "PUT",
+    "path": "/api/products/6",
+    "template": "/api/products/:id",
+    "status": 200,
+    "requestBody": "{\"name\":\"Standing Desk\",\"price\":\"329.00\",\"stock\":\"4\"}",
+    "responseExcerpt": "{\"id\":6,\"name\":\"Standing Desk\",\"priceCents\":32900,\"stock\":4}"
+   }
+  ],
+  "baseline": {
+   "actions": [
+    {
+     "index": 0,
+     "class": "nav",
+     "value": "http://localhost:4101/admin/products",
+     "optional": null,
+     "nav": "/admin/products"
+    },
+    {
+     "index": 1,
+     "class": "click",
+     "role": "button",
+     "name": "Accept",
+     "testId": null,
+     "label": null,
+     "optional": "overlay-dismiss",
+     "nav": null
+    },
+    {
+     "index": 3,
+     "class": "input",
+     "role": "textbox",
+     "name": "Product name",
+     "testId": null,
+     "label": "Product name",
+     "value": "Standing Desk",
+     "optional": null,
+     "nav": null
+    },
+    {
+     "index": 4,
+     "class": "input",
+     "role": "textbox",
+     "name": "Price (USD)",
+     "testId": null,
+     "label": "Price (USD)",
+     "value": "0",
+     "optional": null,
+     "nav": null
+    },
+    {
+     "index": 5,
+     "class": "click",
+     "role": "button",
+     "name": "Create product",
+     "testId": null,
+     "label": null,
+     "optional": null,
+     "nav": null
+    },
+    {
+     "index": 7,
+     "class": "input",
+     "role": "textbox",
+     "name": "Price (USD)",
+     "testId": null,
+     "label": "Price (USD)",
+     "value": "349.00",
+     "optional": null,
+     "nav": null
+    },
+    {
+     "index": 8,
+     "class": "input",
+     "role": "spinbutton",
+     "name": "Stock",
+     "testId": null,
+     "label": "Stock",
+     "value": "4",
+     "optional": null,
+     "nav": null
+    },
+    {
+     "index": 9,
+     "class": "click",
+     "role": "button",
+     "name": "Create product",
+     "testId": null,
+     "label": null,
+     "optional": null,
+     "nav": null
+    },
+    {
+     "index": 10,
+     "class": "click",
+     "role": "button",
+     "name": "Edit",
+     "testId": null,
+     "label": null,
+     "optional": null,
+     "nav": null
+    },
+    {
+     "index": 11,
+     "class": "input",
+     "role": "textbox",
+     "name": "Price (USD)",
+     "testId": null,
+     "label": "Price (USD)",
+     "value": "329.00",
+     "optional": null,
+     "nav": null
+    },
+    {
+     "index": 12,
+     "class": "click",
+     "role": "button",
+     "name": "Save changes",
+     "testId": null,
+     "label": null,
+     "optional": null,
+     "nav": null
+    },
+    {
+     "index": 13,
+     "class": "click",
+     "role": "button",
+     "name": "Delete",
+     "testId": null,
+     "label": null,
+     "optional": null,
+     "nav": null
+    }
+   ],
+   "navigation": [
+    "/admin/products"
+   ],
+   "mutations": [
+    {
+     "method": "POST",
+     "template": "/api/products",
+     "statusClass": "4xx"
+    },
+    {
+     "method": "POST",
+     "template": "/api/products",
+     "statusClass": "2xx"
+    },
+    {
+     "method": "PUT",
+     "template": "/api/products/:id",
+     "statusClass": "2xx"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,24 @@
+{
+  "app": "library",
+  "flow": "borrow-return",
+  "role": "member",
+  "start": "/books",
+  "story": "A member filters the catalog to available books, borrows one, opens My loans and returns it.",
+  "edgeCases": [
+    "control case: borrow + return is net-neutral, so the raw recording is repeatable as-is",
+    "tabs",
+    "row-scoped buttons",
+    "toast text containing a date"
+  ],
+  "expect": {
+    "analysis": {
+      "repeatable": true,
+      "divergences": [],
+      "candidatesInclude": [
+        "Book returned"
+      ]
+    },
+    "verify": "pass"
+  },
+  "mutants": {}
+}

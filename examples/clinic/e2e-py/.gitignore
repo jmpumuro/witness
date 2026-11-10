@@ -1,0 +1,6 @@
+playwright/.auth/
+test-results/
+__pycache__/
+# Witness: raw recordings may contain personal data; run artifacts are disposable
+.witness/recordings/
+.witness/tmp/

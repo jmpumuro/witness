@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "language": "python",
+  "baseURL": "http://localhost:4103",
+  "testDir": "tests",
+  "roles": {
+    "member": {
+      "storageState": "playwright/.auth/member.json",
+      "usernameEnv": "LIBRARY_MEMBER_EMAIL",
+      "passwordEnv": "LIBRARY_MEMBER_PASSWORD"
+    },
+    "librarian": {
+      "storageState": "playwright/.auth/librarian.json",
+      "usernameEnv": "LIBRARY_LIBRARIAN_EMAIL",
+      "passwordEnv": "LIBRARY_LIBRARIAN_PASSWORD"
+    }
+  },
+  "authSetupCommand": "python -m pytest -q -p no:cacheprovider tests/auth_setup.py",
+  "browser": {
+    "channel": null,
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "viewport": [
+      1280,
+      800
+    ]
+  },
+  "testIdAttribute": "data-testid",
+  "credentialEnv": [],
+  "verify": {
+    "repeat": 3,
+    "cpuThrottle": 4
+  },
+  "pytestArgs": []
+}

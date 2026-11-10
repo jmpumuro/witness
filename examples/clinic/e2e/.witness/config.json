@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "language": "typescript",
+  "baseURL": "http://localhost:4102",
+  "testDir": "tests",
+  "playwrightConfig": "playwright.config.ts",
+  "verifyProject": "chromium",
+  "roles": {
+    "staff": {
+      "storageState": "playwright/.auth/staff.json",
+      "usernameEnv": "CLINIC_STAFF_EMAIL",
+      "passwordEnv": "CLINIC_STAFF_PASSWORD"
+    }
+  },
+  "authSetupCommand": "npx playwright test --project=setup",
+  "browser": {
+    "channel": null,
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "viewport": [
+      1280,
+      800
+    ]
+  },
+  "testIdAttribute": "data-testid",
+  "credentialEnv": [],
+  "verify": {
+    "repeat": 3,
+    "cpuThrottle": 4
+  }
+}

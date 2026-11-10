@@ -1,0 +1,2564 @@
+{
+ "analysis": {
+  "version": 1,
+  "flow": "borrow-return",
+  "runs": [
+   {
+    "run": 1,
+    "status": "passed",
+    "error": null,
+    "failedStep": null
+   },
+   {
+    "run": 2,
+    "status": "passed",
+    "error": null,
+    "failedStep": null
+   }
+  ],
+  "repeatable": true,
+  "steps": [
+   {
+    "index": 0,
+    "method": "goto",
+    "class": "nav",
+    "kind": "action",
+    "value": "http://localhost:4103/books",
+    "recordedLocator": "page",
+    "target": null,
+    "locator": null,
+    "candidates": [],
+    "effects": {
+     "added": 39,
+     "removed": 0,
+     "urlChanged": true,
+     "urlAfter": "http://localhost:4103/books",
+     "requests": [
+      "GET /books 200",
+      "GET /api/books 200"
+     ],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 1,
+    "method": "click",
+    "class": "click",
+    "kind": "action",
+    "recordedLocator": "page.get_by_role(\"tab\", name=\"Available\")",
+    "target": {
+     "role": "tab",
+     "name": "Available",
+     "ariaLine": "- tab \"Available\"",
+     "testId": null,
+     "label": null,
+     "containerRole": null,
+     "containerText": null,
+     "tag": "button",
+     "text": null
+    },
+    "locator": {
+     "kind": "role",
+     "code": "get_by_role(\"tab\", name=\"Available\", exact=True)",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "get_by_role(\"tab\", name=\"Available\", exact=True)",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "text",
+      "code": "get_by_text(\"Available\", exact=True)",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 5,
+     "removed": 4,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4103/books",
+     "requests": [
+      "GET /api/books 200"
+     ],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 2,
+    "method": "click",
+    "class": "click",
+    "kind": "action",
+    "recordedLocator": "page.get_by_role(\"listitem\").filter(has_text=\"The Left Hand of Darkness\").get_by_role(\"button\")",
+    "target": {
+     "role": "button",
+     "name": "Borrow",
+     "ariaLine": "- button \"Borrow\"",
+     "testId": null,
+     "label": null,
+     "containerRole": "listitem",
+     "containerText": "The Left Hand of Darkness",
+     "tag": "button",
+     "text": null
+    },
+    "locator": {
+     "kind": "scoped-role",
+     "code": "get_by_role(\"listitem\").filter(has_text=\"The Left Hand of Darkness\").get_by_role(\"button\", name=\"Borrow\", exact=True)",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "get_by_role(\"button\", name=\"Borrow\", exact=True)",
+      "count": 5,
+      "matchesTarget": false
+     },
+     {
+      "kind": "text",
+      "code": "get_by_text(\"Borrow\", exact=True)",
+      "count": 5,
+      "matchesTarget": false
+     },
+     {
+      "kind": "scoped-role",
+      "code": "get_by_role(\"listitem\").filter(has_text=\"The Left Hand of Darkness\").get_by_role(\"button\", name=\"Borrow\", exact=True)",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 2,
+     "removed": 1,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4103/books",
+     "requests": [
+      "POST /api/loans 201",
+      "GET /api/books 200"
+     ],
+     "dialogs": []
+    },
+    "settleMs": 114,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 3,
+    "method": "click",
+    "class": "click",
+    "kind": "observation",
+    "recordedLocator": "page.get_by_text(\"Borrowed The Left Hand of Darkness\")",
+    "target": {
+     "role": "status",
+     "name": null,
+     "ariaLine": "- status: Borrowed The Left Hand of Darkness · due Nov 24",
+     "testId": null,
+     "label": null,
+     "containerRole": null,
+     "containerText": null,
+     "tag": "div",
+     "text": "Borrowed The Left Hand of Darkness · due Nov 24"
+    },
+    "locator": {
+     "kind": "role-unnamed",
+     "code": "get_by_role(\"status\")",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "get_by_role(\"status\")",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "text",
+      "code": "get_by_text(\"Borrowed The Left Hand of Darkness · due Nov 24\", exact=True)",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 0,
+     "removed": 0,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4103/books",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": "observation"
+   },
+   {
+    "index": 4,
+    "method": "click",
+    "class": "click",
+    "kind": "action",
+    "recordedLocator": "page.get_by_role(\"link\", name=\"My loans\")",
+    "target": {
+     "role": "link",
+     "name": "My loans",
+     "ariaLine": "- link \"My loans\":",
+     "testId": null,
+     "label": null,
+     "containerRole": null,
+     "containerText": null,
+     "tag": "a",
+     "text": ""
+    },
+    "locator": {
+     "kind": "role",
+     "code": "get_by_role(\"link\", name=\"My loans\", exact=True)",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "get_by_role(\"link\", name=\"My loans\", exact=True)",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "text",
+      "code": "get_by_text(\"My loans\", exact=True)",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 15,
+     "removed": 31,
+     "urlChanged": true,
+     "urlAfter": "http://localhost:4103/loans",
+     "requests": [
+      "GET /loans 200",
+      "GET /api/loans 200"
+     ],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 5,
+    "method": "click",
+    "class": "click",
+    "kind": "action",
+    "recordedLocator": "page.get_by_role(\"listitem\").filter(has_text=\"The Left Hand of Darkness\").get_by_role(\"button\", name=\"Return\")",
+    "target": {
+     "role": "button",
+     "name": "Return",
+     "ariaLine": "- button \"Return\"",
+     "testId": null,
+     "label": null,
+     "containerRole": "listitem",
+     "containerText": "The Left Hand of Darkness",
+     "tag": "button",
+     "text": null
+    },
+    "locator": {
+     "kind": "scoped-role",
+     "code": "get_by_role(\"listitem\").filter(has_text=\"The Left Hand of Darkness\").get_by_role(\"button\", name=\"Return\", exact=True)",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "get_by_role(\"button\", name=\"Return\", exact=True)",
+      "count": 3,
+      "matchesTarget": false
+     },
+     {
+      "kind": "text",
+      "code": "get_by_text(\"Return\", exact=True)",
+      "count": 3,
+      "matchesTarget": false
+     },
+     {
+      "kind": "scoped-role",
+      "code": "get_by_role(\"listitem\").filter(has_text=\"The Left Hand of Darkness\").get_by_role(\"button\", name=\"Return\", exact=True)",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 2,
+     "removed": 5,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4103/loans",
+     "requests": [
+      "POST /api/loans/:id/return 200",
+      "GET /api/loans 200"
+     ],
+     "dialogs": []
+    },
+    "settleMs": 106,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 6,
+    "method": "click",
+    "class": "click",
+    "kind": "observation",
+    "recordedLocator": "page.get_by_text(\"Book returned\")",
+    "target": {
+     "role": "status",
+     "name": null,
+     "ariaLine": "- status: Book returned",
+     "testId": null,
+     "label": null,
+     "containerRole": null,
+     "containerText": null,
+     "tag": "div",
+     "text": "Book returned"
+    },
+    "locator": {
+     "kind": "role-unnamed",
+     "code": "get_by_role(\"status\")",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "get_by_role(\"status\")",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "text",
+      "code": "get_by_text(\"Book returned\", exact=True)",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 0,
+     "removed": 0,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4103/loans",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": "observation"
+   }
+  ],
+  "checkpointCandidates": [
+   {
+    "id": "c96",
+    "step": 5,
+    "type": "appeared",
+    "line": "- status: Book returned",
+    "path": [],
+    "role": "status",
+    "name": null,
+    "text": "Book returned",
+    "onLoad": false,
+    "inFinal": true,
+    "attended": true,
+    "settleMs": 106,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 6
+   },
+   {
+    "id": "c45",
+    "step": 2,
+    "type": "appeared",
+    "line": "- status: Borrowed The Left Hand of Darkness · due Nov 24",
+    "path": [],
+    "role": "status",
+    "name": null,
+    "text": "Borrowed The Left Hand of Darkness · due Nov 24",
+    "onLoad": false,
+    "inFinal": false,
+    "attended": true,
+    "settleMs": 114,
+    "timeLike": true,
+    "stability": "stable",
+    "score": 4
+   },
+   {
+    "id": "c94",
+    "step": 4,
+    "type": "url",
+    "line": "/loans",
+    "urlAfter": "http://localhost:4103/loans",
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 3
+   },
+   {
+    "id": "c48",
+    "step": 4,
+    "type": "appeared",
+    "line": "- heading \"My loans\" [level=1]",
+    "path": [
+     "- main"
+    ],
+    "role": "heading",
+    "name": "My loans",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 2
+   },
+   {
+    "id": "c50",
+    "step": 4,
+    "type": "appeared",
+    "line": "- list \"Loans\":",
+    "path": [
+     "- main"
+    ],
+    "role": "list",
+    "name": "Loans",
+    "text": "",
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 1
+   },
+   {
+    "id": "c51",
+    "step": 4,
+    "type": "appeared",
+    "line": "- listitem:",
+    "path": [
+     "- main",
+     "- list \"Loans\""
+    ],
+    "role": "listitem",
+    "name": null,
+    "text": "",
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 1
+   },
+   {
+    "id": "c52",
+    "step": 4,
+    "type": "appeared",
+    "line": "- strong: Dune",
+    "path": [
+     "- main",
+     "- list \"Loans\"",
+     "- listitem"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "Dune",
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 1
+   },
+   {
+    "id": "c54",
+    "step": 4,
+    "type": "appeared",
+    "line": "- button \"Return\"",
+    "path": [
+     "- main",
+     "- list \"Loans\"",
+     "- listitem"
+    ],
+    "role": "button",
+    "name": "Return",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 1
+   },
+   {
+    "id": "c55",
+    "step": 4,
+    "type": "appeared",
+    "line": "- listitem:",
+    "path": [
+     "- main",
+     "- list \"Loans\""
+    ],
+    "role": "listitem",
+    "name": null,
+    "text": "",
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 1
+   },
+   {
+    "id": "c56",
+    "step": 4,
+    "type": "appeared",
+    "line": "- strong: Kindred",
+    "path": [
+     "- main",
+     "- list \"Loans\"",
+     "- listitem"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "Kindred",
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 1
+   },
+   {
+    "id": "c58",
+    "step": 4,
+    "type": "appeared",
+    "line": "- button \"Return\"",
+    "path": [
+     "- main",
+     "- list \"Loans\"",
+     "- listitem"
+    ],
+    "role": "button",
+    "name": "Return",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 1
+   },
+   {
+    "id": "c59",
+    "step": 4,
+    "type": "appeared",
+    "line": "- listitem:",
+    "path": [
+     "- main",
+     "- list \"Loans\""
+    ],
+    "role": "listitem",
+    "name": null,
+    "text": "",
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 1
+   },
+   {
+    "id": "c62",
+    "step": 4,
+    "type": "appeared",
+    "line": "- button \"Return\"",
+    "path": [
+     "- main",
+     "- list \"Loans\"",
+     "- listitem"
+    ],
+    "role": "button",
+    "name": "Return",
+    "text": null,
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 1
+   },
+   {
+    "id": "c63",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- heading \"Catalog\" [level=1]",
+    "path": [
+     "- main"
+    ],
+    "role": "heading",
+    "name": "Catalog",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 1
+   },
+   {
+    "id": "c93",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- status: Borrowed The Left Hand of Darkness · due Nov 24",
+    "path": [],
+    "role": "status",
+    "name": null,
+    "text": "Borrowed The Left Hand of Darkness · due Nov 24",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": true,
+    "stability": "stable",
+    "score": 1
+   },
+   {
+    "id": "c95",
+    "step": 5,
+    "type": "appeared",
+    "line": "- paragraph: 2 of 3 loans in use",
+    "path": [
+     "- main"
+    ],
+    "role": "paragraph",
+    "name": null,
+    "text": "2 of 3 loans in use",
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 106,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 1
+   },
+   {
+    "id": "c35",
+    "step": 1,
+    "type": "appeared",
+    "line": "- tab \"All\"",
+    "path": [
+     "- main",
+     "- tablist \"Filter books\""
+    ],
+    "role": "tab",
+    "name": "All",
+    "text": null,
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c36",
+    "step": 1,
+    "type": "appeared",
+    "line": "- tab \"Available\" [selected]",
+    "path": [
+     "- main",
+     "- tablist \"Filter books\""
+    ],
+    "role": "tab",
+    "name": "Available",
+    "text": null,
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c37",
+    "step": 1,
+    "type": "appeared",
+    "line": "- strong: Station Eleven",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "Station Eleven",
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c38",
+    "step": 1,
+    "type": "appeared",
+    "line": "- text: Emily St. John Mandel · 2 of 2 available",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Emily St. John Mandel · 2 of 2 available",
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c39",
+    "step": 1,
+    "type": "appeared",
+    "line": "- button \"Borrow\"",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "button",
+    "name": "Borrow",
+    "text": null,
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c40",
+    "step": 1,
+    "type": "disappeared",
+    "line": "- tab \"All\" [selected]",
+    "path": [
+     "- main",
+     "- tablist \"Filter books\""
+    ],
+    "role": "tab",
+    "name": "All",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c41",
+    "step": 1,
+    "type": "disappeared",
+    "line": "- tab \"Available\"",
+    "path": [
+     "- main",
+     "- tablist \"Filter books\""
+    ],
+    "role": "tab",
+    "name": "Available",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c42",
+    "step": 1,
+    "type": "disappeared",
+    "line": "- strong: Kindred",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "Kindred",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c43",
+    "step": 1,
+    "type": "disappeared",
+    "line": "- text: Octavia E. Butler · 0 of 1 available All copies on loan",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Octavia E. Butler · 0 of 1 available All copies on loan",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c44",
+    "step": 2,
+    "type": "appeared",
+    "line": "- text: Ursula K. Le Guin · 1 of 2 available",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Ursula K. Le Guin · 1 of 2 available",
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 114,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c46",
+    "step": 2,
+    "type": "disappeared",
+    "line": "- text: Ursula K. Le Guin · 2 of 2 available",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Ursula K. Le Guin · 2 of 2 available",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 114,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c47",
+    "step": 2,
+    "type": "request",
+    "line": "POST /api/loans → 201",
+    "method": "POST",
+    "template": "/api/loans",
+    "status": 201,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": null,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c49",
+    "step": 4,
+    "type": "appeared",
+    "line": "- paragraph: 3 of 3 loans in use",
+    "path": [
+     "- main"
+    ],
+    "role": "paragraph",
+    "name": null,
+    "text": "3 of 3 loans in use",
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c53",
+    "step": 4,
+    "type": "appeared",
+    "line": "- text: Due Nov 1 Overdue by 9 days",
+    "path": [
+     "- main",
+     "- list \"Loans\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Due Nov 1 Overdue by 9 days",
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": true,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c57",
+    "step": 4,
+    "type": "appeared",
+    "line": "- text: Due Nov 9 Overdue by 1 day",
+    "path": [
+     "- main",
+     "- list \"Loans\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Due Nov 9 Overdue by 1 day",
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": true,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c60",
+    "step": 4,
+    "type": "appeared",
+    "line": "- strong: The Left Hand of Darkness",
+    "path": [
+     "- main",
+     "- list \"Loans\"",
+     "- listitem"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "The Left Hand of Darkness",
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c64",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- tablist \"Filter books\":",
+    "path": [
+     "- main"
+    ],
+    "role": "tablist",
+    "name": "Filter books",
+    "text": "",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c65",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- tab \"All\"",
+    "path": [
+     "- main",
+     "- tablist \"Filter books\""
+    ],
+    "role": "tab",
+    "name": "All",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c66",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- tab \"Available\" [selected]",
+    "path": [
+     "- main",
+     "- tablist \"Filter books\""
+    ],
+    "role": "tab",
+    "name": "Available",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c67",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- tab \"On loan\"",
+    "path": [
+     "- main",
+     "- tablist \"Filter books\""
+    ],
+    "role": "tab",
+    "name": "On loan",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c68",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- list \"Books\":",
+    "path": [
+     "- main"
+    ],
+    "role": "list",
+    "name": "Books",
+    "text": "",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c69",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- listitem:",
+    "path": [
+     "- main",
+     "- list \"Books\""
+    ],
+    "role": "listitem",
+    "name": null,
+    "text": "",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c70",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- strong: Dune",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "Dune",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c71",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- text: Frank Herbert · 1 of 2 available",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Frank Herbert · 1 of 2 available",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c72",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- button \"Borrow\"",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "button",
+    "name": "Borrow",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c73",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- listitem:",
+    "path": [
+     "- main",
+     "- list \"Books\""
+    ],
+    "role": "listitem",
+    "name": null,
+    "text": "",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c74",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- strong: The Left Hand of Darkness",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "The Left Hand of Darkness",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c75",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- text: Ursula K. Le Guin · 1 of 2 available",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Ursula K. Le Guin · 1 of 2 available",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c76",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- button \"Borrow\"",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "button",
+    "name": "Borrow",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c77",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- listitem:",
+    "path": [
+     "- main",
+     "- list \"Books\""
+    ],
+    "role": "listitem",
+    "name": null,
+    "text": "",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c78",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- strong: Piranesi",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "Piranesi",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c79",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- text: Susanna Clarke · 1 of 1 available",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Susanna Clarke · 1 of 1 available",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c80",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- button \"Borrow\"",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "button",
+    "name": "Borrow",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c81",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- listitem:",
+    "path": [
+     "- main",
+     "- list \"Books\""
+    ],
+    "role": "listitem",
+    "name": null,
+    "text": "",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c82",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- strong: The Dispossessed",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "The Dispossessed",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c83",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- text: Ursula K. Le Guin · 1 of 1 available",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Ursula K. Le Guin · 1 of 1 available",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c84",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- button \"Borrow\"",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "button",
+    "name": "Borrow",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c85",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- listitem:",
+    "path": [
+     "- main",
+     "- list \"Books\""
+    ],
+    "role": "listitem",
+    "name": null,
+    "text": "",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c86",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- strong: Station Eleven",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "Station Eleven",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c87",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- text: Emily St. John Mandel · 2 of 2 available",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Emily St. John Mandel · 2 of 2 available",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c88",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- button \"Borrow\"",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "button",
+    "name": "Borrow",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c89",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- navigation \"Pagination\":",
+    "path": [
+     "- main"
+    ],
+    "role": "navigation",
+    "name": "Pagination",
+    "text": "",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c90",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- button \"Previous page\" [disabled]",
+    "path": [
+     "- main",
+     "- navigation \"Pagination\""
+    ],
+    "role": "button",
+    "name": "Previous page",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c91",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- text: Page 1 of 2",
+    "path": [
+     "- main",
+     "- navigation \"Pagination\""
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Page 1 of 2",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c92",
+    "step": 4,
+    "type": "disappeared",
+    "line": "- button \"Next page\"",
+    "path": [
+     "- main",
+     "- navigation \"Pagination\""
+    ],
+    "role": "button",
+    "name": "Next page",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c97",
+    "step": 5,
+    "type": "disappeared",
+    "line": "- paragraph: 3 of 3 loans in use",
+    "path": [
+     "- main"
+    ],
+    "role": "paragraph",
+    "name": null,
+    "text": "3 of 3 loans in use",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 106,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c98",
+    "step": 5,
+    "type": "disappeared",
+    "line": "- listitem:",
+    "path": [
+     "- main",
+     "- list \"Loans\""
+    ],
+    "role": "listitem",
+    "name": null,
+    "text": "",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 106,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c99",
+    "step": 5,
+    "type": "disappeared",
+    "line": "- strong: The Left Hand of Darkness",
+    "path": [
+     "- main",
+     "- list \"Loans\"",
+     "- listitem"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "The Left Hand of Darkness",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 106,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c101",
+    "step": 5,
+    "type": "disappeared",
+    "line": "- button \"Return\"",
+    "path": [
+     "- main",
+     "- list \"Loans\"",
+     "- listitem"
+    ],
+    "role": "button",
+    "name": "Return",
+    "text": null,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 106,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c102",
+    "step": 5,
+    "type": "request",
+    "line": "POST /api/loans/:id/return → 200",
+    "method": "POST",
+    "template": "/api/loans/:id/return",
+    "status": 200,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": null,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c1",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: Cedar Public Library",
+    "path": [
+     "- banner"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Cedar Public Library",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c2",
+    "step": 0,
+    "type": "appeared",
+    "line": "- link \"Catalog\":",
+    "path": [
+     "- banner",
+     "- navigation"
+    ],
+    "role": "link",
+    "name": "Catalog",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c3",
+    "step": 0,
+    "type": "appeared",
+    "line": "- link \"My loans\":",
+    "path": [
+     "- banner",
+     "- navigation"
+    ],
+    "role": "link",
+    "name": "My loans",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c4",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: Maya Chen",
+    "path": [
+     "- banner"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Maya Chen",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c5",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Sign out\"",
+    "path": [
+     "- banner"
+    ],
+    "role": "button",
+    "name": "Sign out",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c6",
+    "step": 0,
+    "type": "appeared",
+    "line": "- heading \"Catalog\" [level=1]",
+    "path": [
+     "- main"
+    ],
+    "role": "heading",
+    "name": "Catalog",
+    "text": null,
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c12",
+    "step": 0,
+    "type": "appeared",
+    "line": "- listitem:",
+    "path": [
+     "- main",
+     "- list \"Books\""
+    ],
+    "role": "listitem",
+    "name": null,
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c13",
+    "step": 0,
+    "type": "appeared",
+    "line": "- strong: Dune",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "Dune",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c16",
+    "step": 0,
+    "type": "appeared",
+    "line": "- listitem:",
+    "path": [
+     "- main",
+     "- list \"Books\""
+    ],
+    "role": "listitem",
+    "name": null,
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c20",
+    "step": 0,
+    "type": "appeared",
+    "line": "- listitem:",
+    "path": [
+     "- main",
+     "- list \"Books\""
+    ],
+    "role": "listitem",
+    "name": null,
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c21",
+    "step": 0,
+    "type": "appeared",
+    "line": "- strong: Kindred",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "Kindred",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c23",
+    "step": 0,
+    "type": "appeared",
+    "line": "- listitem:",
+    "path": [
+     "- main",
+     "- list \"Books\""
+    ],
+    "role": "listitem",
+    "name": null,
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c27",
+    "step": 0,
+    "type": "appeared",
+    "line": "- listitem:",
+    "path": [
+     "- main",
+     "- list \"Books\""
+    ],
+    "role": "listitem",
+    "name": null,
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c61",
+    "step": 4,
+    "type": "appeared",
+    "line": "- text: Due Nov 24 Due in 14 days",
+    "path": [
+     "- main",
+     "- list \"Loans\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Due Nov 24 Due in 14 days",
+    "onLoad": false,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": true,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c100",
+    "step": 5,
+    "type": "disappeared",
+    "line": "- text: Due Nov 24 Due in 14 days",
+    "path": [
+     "- main",
+     "- list \"Loans\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Due Nov 24 Due in 14 days",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 106,
+    "timeLike": true,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c7",
+    "step": 0,
+    "type": "appeared",
+    "line": "- tablist \"Filter books\":",
+    "path": [
+     "- main"
+    ],
+    "role": "tablist",
+    "name": "Filter books",
+    "text": "",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c8",
+    "step": 0,
+    "type": "appeared",
+    "line": "- tab \"All\" [selected]",
+    "path": [
+     "- main",
+     "- tablist \"Filter books\""
+    ],
+    "role": "tab",
+    "name": "All",
+    "text": null,
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c9",
+    "step": 0,
+    "type": "appeared",
+    "line": "- tab \"Available\"",
+    "path": [
+     "- main",
+     "- tablist \"Filter books\""
+    ],
+    "role": "tab",
+    "name": "Available",
+    "text": null,
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c10",
+    "step": 0,
+    "type": "appeared",
+    "line": "- tab \"On loan\"",
+    "path": [
+     "- main",
+     "- tablist \"Filter books\""
+    ],
+    "role": "tab",
+    "name": "On loan",
+    "text": null,
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c11",
+    "step": 0,
+    "type": "appeared",
+    "line": "- list \"Books\":",
+    "path": [
+     "- main"
+    ],
+    "role": "list",
+    "name": "Books",
+    "text": "",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c14",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: Frank Herbert · 1 of 2 available",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Frank Herbert · 1 of 2 available",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c15",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Borrow\"",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "button",
+    "name": "Borrow",
+    "text": null,
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c17",
+    "step": 0,
+    "type": "appeared",
+    "line": "- strong: The Left Hand of Darkness",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "The Left Hand of Darkness",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c18",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: Ursula K. Le Guin · 2 of 2 available",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Ursula K. Le Guin · 2 of 2 available",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c19",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Borrow\"",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "button",
+    "name": "Borrow",
+    "text": null,
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c22",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: Octavia E. Butler · 0 of 1 available All copies on loan",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Octavia E. Butler · 0 of 1 available All copies on loan",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c24",
+    "step": 0,
+    "type": "appeared",
+    "line": "- strong: Piranesi",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "Piranesi",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c25",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: Susanna Clarke · 1 of 1 available",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Susanna Clarke · 1 of 1 available",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c26",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Borrow\"",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "button",
+    "name": "Borrow",
+    "text": null,
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c28",
+    "step": 0,
+    "type": "appeared",
+    "line": "- strong: The Dispossessed",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "The Dispossessed",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c29",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: Ursula K. Le Guin · 1 of 1 available",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Ursula K. Le Guin · 1 of 1 available",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c30",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Borrow\"",
+    "path": [
+     "- main",
+     "- list \"Books\"",
+     "- listitem"
+    ],
+    "role": "button",
+    "name": "Borrow",
+    "text": null,
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c31",
+    "step": 0,
+    "type": "appeared",
+    "line": "- navigation \"Pagination\":",
+    "path": [
+     "- main"
+    ],
+    "role": "navigation",
+    "name": "Pagination",
+    "text": "",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c32",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Previous page\" [disabled]",
+    "path": [
+     "- main",
+     "- navigation \"Pagination\""
+    ],
+    "role": "button",
+    "name": "Previous page",
+    "text": null,
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c33",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: Page 1 of 2",
+    "path": [
+     "- main",
+     "- navigation \"Pagination\""
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Page 1 of 2",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c34",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Next page\"",
+    "path": [
+     "- main",
+     "- navigation \"Pagination\""
+    ],
+    "role": "button",
+    "name": "Next page",
+    "text": null,
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 0,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   }
+  ],
+  "divergences": [],
+  "dialogs": [],
+  "overlays": [],
+  "timeDependent": [
+   "c45",
+   "c93",
+   "c53",
+   "c57",
+   "c61",
+   "c100"
+  ],
+  "api": [
+   {
+    "step": 2,
+    "method": "POST",
+    "path": "/api/loans",
+    "template": "/api/loans",
+    "status": 201,
+    "requestBody": "{\"bookId\":2}",
+    "responseExcerpt": "{\"id\":5,\"bookId\":2,\"userId\":2,\"borrowedAt\":\"2026-11-10T19:20:36.361Z\",\"dueAt\":\"2026-11-24T19:20:36.361Z\",\"returnedAt\":null,\"title\":\"The Left Hand of Darkness\"}"
+   },
+   {
+    "step": 5,
+    "method": "POST",
+    "path": "/api/loans/5/return",
+    "template": "/api/loans/:id/return",
+    "status": 200,
+    "requestBody": null,
+    "responseExcerpt": "{\"ok\":true}"
+   }
+  ],
+  "baseline": {
+   "actions": [
+    {
+     "index": 0,
+     "class": "nav",
+     "value": "http://localhost:4103/books",
+     "optional": null,
+     "nav": "/books"
+    },
+    {
+     "index": 1,
+     "class": "click",
+     "role": "tab",
+     "name": "Available",
+     "testId": null,
+     "label": null,
+     "optional": null,
+     "nav": null
+    },
+    {
+     "index": 2,
+     "class": "click",
+     "role": "button",
+     "name": "Borrow",
+     "testId": null,
+     "label": null,
+     "optional": null,
+     "nav": null
+    },
+    {
+     "index": 4,
+     "class": "click",
+     "role": "link",
+     "name": "My loans",
+     "testId": null,
+     "label": null,
+     "optional": null,
+     "nav": null
+    },
+    {
+     "index": 5,
+     "class": "click",
+     "role": "button",
+     "name": "Return",
+     "testId": null,
+     "label": null,
+     "optional": null,
+     "nav": null
+    }
+   ],
+   "navigation": [
+    "/books",
+    "/loans"
+   ],
+   "mutations": [
+    {
+     "method": "POST",
+     "template": "/api/loans",
+     "statusClass": "2xx"
+    },
+    {
+     "method": "POST",
+     "template": "/api/loans/:id/return",
+     "statusClass": "2xx"
+    }
+   ]
+  }
+ },
+ "fidelity": {
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "info": [],
+  "stats": {
+   "requiredActions": 5,
+   "matchedRequired": 5,
+   "generatedActions": 5
+  }
+ },
+ "vacuityPlan": {
+  "assertions": [
+   {
+    "order": 0,
+    "afterStep": 2,
+    "kind": "locator",
+    "matcher": "toHaveText",
+    "pyMatcher": "to_have_text",
+    "isNot": false,
+    "args": [
+     {
+      "$regex": "^Borrowed The Left Hand of Darkness · due \\w{3} \\d{1,2}$",
+      "flags": ""
+     }
+    ],
+    "kwargs": {},
+    "selector": "internal:role=status",
+    "locator": "page.get_by_role(\"status\")"
+   },
+   {
+    "order": 1,
+    "afterStep": 3,
+    "kind": "locator",
+    "matcher": "toContainText",
+    "pyMatcher": "to_contain_text",
+    "isNot": false,
+    "args": [
+     "Due in 14 days"
+    ],
+    "kwargs": {},
+    "selector": "internal:role=listitem >> internal:has-text=\"The Left Hand of Darkness\"i",
+    "locator": "page.get_by_role(\"listitem\").filter(has_text=\"The Left Hand of Darkness\")"
+   },
+   {
+    "order": 2,
+    "afterStep": 4,
+    "kind": "locator",
+    "matcher": "toHaveText",
+    "pyMatcher": "to_have_text",
+    "isNot": false,
+    "args": [
+     "Book returned"
+    ],
+    "kwargs": {},
+    "selector": "internal:role=status",
+    "locator": "page.get_by_role(\"status\")"
+   },
+   {
+    "order": 3,
+    "afterStep": 4,
+    "kind": "locator",
+    "matcher": "toHaveCount",
+    "pyMatcher": "to_have_count",
+    "isNot": false,
+    "args": [
+     0
+    ],
+    "kwargs": {},
+    "selector": "internal:role=listitem >> internal:has-text=\"The Left Hand of Darkness\"i",
+    "locator": "page.get_by_role(\"listitem\").filter(has_text=\"The Left Hand of Darkness\")"
+   }
+  ],
+  "values": []
+ },
+ "signatures": [
+  "toHaveText([{\"$regex\":\"^Borrowed The Left Hand of Darkness · due \\\\w{3} \\\\d{1,2}$\",\"flags\":\"\"}])",
+  "toContainText([\"Due in 14 days\"])",
+  "toHaveText([\"Book returned\"])",
+  "toHaveCount([0])"
+ ]
+}

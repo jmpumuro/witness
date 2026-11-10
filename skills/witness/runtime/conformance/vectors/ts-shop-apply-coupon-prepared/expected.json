@@ -1,0 +1,1232 @@
+{
+ "analysis": {
+  "version": 1,
+  "flow": "apply-coupon",
+  "runs": [
+   {
+    "run": 1,
+    "status": "passed",
+    "error": null,
+    "failedStep": null
+   },
+   {
+    "run": 2,
+    "status": "passed",
+    "error": null,
+    "failedStep": null
+   }
+  ],
+  "repeatable": true,
+  "steps": [
+   {
+    "index": 0,
+    "method": "goto",
+    "class": "nav",
+    "kind": "action",
+    "value": "http://localhost:4101/cart",
+    "recordedLocator": "page",
+    "target": null,
+    "locator": null,
+    "candidates": [],
+    "effects": {
+     "added": 40,
+     "removed": 0,
+     "urlChanged": true,
+     "urlAfter": "http://localhost:4101/cart",
+     "requests": [
+      "GET /cart 200",
+      "GET /api/cart 200"
+     ],
+     "dialogs": []
+    },
+    "settleMs": 233,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 1,
+    "method": "click",
+    "class": "click",
+    "kind": "action",
+    "recordedLocator": "getByRole('button', { name: 'Accept' })",
+    "target": {
+     "role": "button",
+     "name": "Accept",
+     "ariaLine": "- button \"Accept\"",
+     "testId": null,
+     "label": null,
+     "containerRole": "dialog",
+     "containerText": null,
+     "tag": "button",
+     "text": null
+    },
+    "locator": {
+     "kind": "role",
+     "code": "getByRole('button', { name: 'Accept', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('button', { name: 'Accept', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "text",
+      "code": "getByText('Accept', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 0,
+     "removed": 4,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/cart",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": "overlay-dismiss"
+   },
+   {
+    "index": 2,
+    "method": "click",
+    "class": "click",
+    "kind": "observation",
+    "recordedLocator": "getByRole('textbox', { name: 'Coupon code' })",
+    "target": {
+     "role": "textbox",
+     "name": "Coupon code",
+     "ariaLine": "- textbox \"Coupon code\"",
+     "testId": null,
+     "label": "Coupon code",
+     "containerRole": null,
+     "containerText": null,
+     "tag": "input",
+     "text": null
+    },
+    "locator": {
+     "kind": "role",
+     "code": "getByRole('textbox', { name: 'Coupon code', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('textbox', { name: 'Coupon code', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "label",
+      "code": "getByLabel('Coupon code', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 0,
+     "removed": 0,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/cart",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": "focus-before-input"
+   },
+   {
+    "index": 3,
+    "method": "fill",
+    "class": "input",
+    "kind": "action",
+    "value": "SAVE01",
+    "recordedLocator": "getByRole('textbox', { name: 'Coupon code' })",
+    "target": {
+     "role": "textbox",
+     "name": "Coupon code",
+     "ariaLine": "- textbox \"Coupon code\"",
+     "testId": null,
+     "label": "Coupon code",
+     "containerRole": null,
+     "containerText": null,
+     "tag": "input",
+     "text": null
+    },
+    "locator": {
+     "kind": "role",
+     "code": "getByRole('textbox', { name: 'Coupon code', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('textbox', { name: 'Coupon code', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "label",
+      "code": "getByLabel('Coupon code', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 1,
+     "removed": 1,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/cart",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": "superseded-input"
+   },
+   {
+    "index": 4,
+    "method": "fill",
+    "class": "input",
+    "kind": "action",
+    "value": "SAVE10-MWB2QKZM",
+    "recordedLocator": "getByRole('textbox', { name: 'Coupon code' })",
+    "target": {
+     "role": "textbox",
+     "name": "Coupon code",
+     "ariaLine": "- textbox \"Coupon code\": SAVE01",
+     "testId": null,
+     "label": "Coupon code",
+     "containerRole": null,
+     "containerText": null,
+     "tag": "input",
+     "text": "SAVE01"
+    },
+    "locator": {
+     "kind": "role",
+     "code": "getByRole('textbox', { name: 'Coupon code', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('textbox', { name: 'Coupon code', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "label",
+      "code": "getByLabel('Coupon code', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 1,
+     "removed": 1,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/cart",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 5,
+    "method": "click",
+    "class": "click",
+    "kind": "action",
+    "recordedLocator": "locator('#apply')",
+    "target": {
+     "role": "button",
+     "name": "Apply",
+     "ariaLine": "- button \"Apply\"",
+     "testId": null,
+     "label": null,
+     "containerRole": null,
+     "containerText": null,
+     "tag": "button",
+     "text": null
+    },
+    "locator": {
+     "kind": "role",
+     "code": "getByRole('button', { name: 'Apply', exact: true })",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('button', { name: 'Apply', exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "text",
+      "code": "getByText('Apply', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 3,
+     "removed": 1,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/cart",
+     "requests": [
+      "POST /api/cart/coupon 200",
+      "GET /api/cart 200"
+     ],
+     "dialogs": []
+    },
+    "settleMs": 664,
+    "delayedEffect": true,
+    "error": null,
+    "optional": null
+   },
+   {
+    "index": 6,
+    "method": "click",
+    "class": "click",
+    "kind": "observation",
+    "recordedLocator": "getByText('Coupon applied')",
+    "target": {
+     "role": "status",
+     "name": null,
+     "ariaLine": "- status: Coupon applied",
+     "testId": null,
+     "label": null,
+     "containerRole": null,
+     "containerText": null,
+     "tag": "div",
+     "text": "Coupon applied"
+    },
+    "locator": {
+     "kind": "role-unnamed",
+     "code": "getByRole('status')",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('status')",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "text",
+      "code": "getByText('Coupon applied', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 0,
+     "removed": 0,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/cart",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": "observation"
+   },
+   {
+    "index": 7,
+    "method": "click",
+    "class": "click",
+    "kind": "observation",
+    "recordedLocator": "getByTestId('order-total')",
+    "target": {
+     "role": "strong",
+     "name": null,
+     "ariaLine": "- strong: $45.00",
+     "testId": "order-total",
+     "label": null,
+     "containerRole": null,
+     "containerText": null,
+     "tag": "strong",
+     "text": "$45.00"
+    },
+    "locator": {
+     "kind": "testid",
+     "code": "getByTestId('order-total')",
+     "count": 1,
+     "matchesTarget": true,
+     "index": 0
+    },
+    "candidates": [
+     {
+      "kind": "role",
+      "code": "getByRole('strong')",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "testid",
+      "code": "getByTestId('order-total')",
+      "count": 1,
+      "matchesTarget": true
+     },
+     {
+      "kind": "text",
+      "code": "getByText('$45.00', { exact: true })",
+      "count": 1,
+      "matchesTarget": true
+     }
+    ],
+    "effects": {
+     "added": 0,
+     "removed": 0,
+     "urlChanged": false,
+     "urlAfter": "http://localhost:4101/cart",
+     "requests": [],
+     "dialogs": []
+    },
+    "settleMs": 0,
+    "delayedEffect": false,
+    "error": null,
+    "optional": "observation"
+   }
+  ],
+  "checkpointCandidates": [
+   {
+    "id": "c32",
+    "step": 5,
+    "type": "appeared",
+    "line": "- status: Coupon applied",
+    "path": [],
+    "role": "status",
+    "name": null,
+    "text": "Coupon applied",
+    "onLoad": false,
+    "inFinal": true,
+    "attended": true,
+    "settleMs": 664,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 6
+   },
+   {
+    "id": "c31",
+    "step": 5,
+    "type": "appeared",
+    "line": "- strong: $45.00",
+    "path": [
+     "- main",
+     "- paragraph"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "$45.00",
+    "onLoad": false,
+    "inFinal": true,
+    "attended": true,
+    "settleMs": 664,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 4
+   },
+   {
+    "id": "c6",
+    "step": 0,
+    "type": "appeared",
+    "line": "- heading \"Your cart\" [level=1]",
+    "path": [
+     "- main"
+    ],
+    "role": "heading",
+    "name": "Your cart",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c33",
+    "step": 5,
+    "type": "disappeared",
+    "line": "- strong: $50.00",
+    "path": [
+     "- main",
+     "- paragraph"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "$50.00",
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 664,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c34",
+    "step": 5,
+    "type": "request",
+    "line": "POST /api/cart/coupon → 200",
+    "method": "POST",
+    "template": "/api/cart/coupon",
+    "status": 200,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": null,
+    "timeLike": false,
+    "stability": "stable",
+    "score": 0
+   },
+   {
+    "id": "c1",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: Northwind Shop",
+    "path": [
+     "- banner"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Northwind Shop",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c2",
+    "step": 0,
+    "type": "appeared",
+    "line": "- link \"Products\":",
+    "path": [
+     "- banner",
+     "- navigation"
+    ],
+    "role": "link",
+    "name": "Products",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c3",
+    "step": 0,
+    "type": "appeared",
+    "line": "- link \"Cart\":",
+    "path": [
+     "- banner",
+     "- navigation"
+    ],
+    "role": "link",
+    "name": "Cart",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c4",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: Alice Moreno",
+    "path": [
+     "- banner"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Alice Moreno",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c5",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Sign out\"",
+    "path": [
+     "- banner"
+    ],
+    "role": "button",
+    "name": "Sign out",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c7",
+    "step": 0,
+    "type": "appeared",
+    "line": "- table \"Cart items\":",
+    "path": [
+     "- main"
+    ],
+    "role": "table",
+    "name": "Cart items",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c8",
+    "step": 0,
+    "type": "appeared",
+    "line": "- row \"Item Quantity Price\":",
+    "path": [
+     "- main",
+     "- table \"Cart items\"",
+     "- rowgroup"
+    ],
+    "role": "row",
+    "name": "Item Quantity Price",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c9",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Item\"",
+    "path": [
+     "- main",
+     "- table \"Cart items\"",
+     "- rowgroup",
+     "- row \"Item Quantity Price\""
+    ],
+    "role": "cell",
+    "name": "Item",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c10",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Quantity\"",
+    "path": [
+     "- main",
+     "- table \"Cart items\"",
+     "- rowgroup",
+     "- row \"Item Quantity Price\""
+    ],
+    "role": "cell",
+    "name": "Quantity",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c11",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Price\"",
+    "path": [
+     "- main",
+     "- table \"Cart items\"",
+     "- rowgroup",
+     "- row \"Item Quantity Price\""
+    ],
+    "role": "cell",
+    "name": "Price",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c12",
+    "step": 0,
+    "type": "appeared",
+    "line": "- row \"Desk Lamp 1 $50.00 Remove\":",
+    "path": [
+     "- main",
+     "- table \"Cart items\"",
+     "- rowgroup"
+    ],
+    "role": "row",
+    "name": "Desk Lamp 1 $50.00 Remove",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c13",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Desk Lamp\"",
+    "path": [
+     "- main",
+     "- table \"Cart items\"",
+     "- rowgroup",
+     "- row \"Desk Lamp 1 $50.00 Remove\""
+    ],
+    "role": "cell",
+    "name": "Desk Lamp",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c14",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"1\":",
+    "path": [
+     "- main",
+     "- table \"Cart items\"",
+     "- rowgroup",
+     "- row \"Desk Lamp 1 $50.00 Remove\""
+    ],
+    "role": "cell",
+    "name": "1",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c15",
+    "step": 0,
+    "type": "appeared",
+    "line": "- spinbutton \"Quantity for Desk Lamp\": \"1\"",
+    "path": [
+     "- main",
+     "- table \"Cart items\"",
+     "- rowgroup",
+     "- row \"Desk Lamp 1 $50.00 Remove\"",
+     "- cell \"1\""
+    ],
+    "role": "spinbutton",
+    "name": "Quantity for Desk Lamp",
+    "text": "\"1\"",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c16",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"$50.00\"",
+    "path": [
+     "- main",
+     "- table \"Cart items\"",
+     "- rowgroup",
+     "- row \"Desk Lamp 1 $50.00 Remove\""
+    ],
+    "role": "cell",
+    "name": "$50.00",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c17",
+    "step": 0,
+    "type": "appeared",
+    "line": "- cell \"Remove\":",
+    "path": [
+     "- main",
+     "- table \"Cart items\"",
+     "- rowgroup",
+     "- row \"Desk Lamp 1 $50.00 Remove\""
+    ],
+    "role": "cell",
+    "name": "Remove",
+    "text": "",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c18",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Remove\"",
+    "path": [
+     "- main",
+     "- table \"Cart items\"",
+     "- rowgroup",
+     "- row \"Desk Lamp 1 $50.00 Remove\"",
+     "- cell \"Remove\""
+    ],
+    "role": "button",
+    "name": "Remove",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c19",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: Coupon code",
+    "path": [
+     "- main"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "Coupon code",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c21",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Apply\"",
+    "path": [
+     "- main"
+    ],
+    "role": "button",
+    "name": "Apply",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c22",
+    "step": 0,
+    "type": "appeared",
+    "line": "- paragraph: \"Subtotal: $50.00\"",
+    "path": [
+     "- main"
+    ],
+    "role": "paragraph",
+    "name": null,
+    "text": "\"Subtotal: $50.00\"",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c23",
+    "step": 0,
+    "type": "appeared",
+    "line": "- text: \"Total:\"",
+    "path": [
+     "- main",
+     "- paragraph"
+    ],
+    "role": "text",
+    "name": null,
+    "text": "\"Total:\"",
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c25",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Place order\"",
+    "path": [
+     "- main"
+    ],
+    "role": "button",
+    "name": "Place order",
+    "text": null,
+    "onLoad": true,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -1
+   },
+   {
+    "id": "c20",
+    "step": 0,
+    "type": "appeared",
+    "line": "- textbox \"Coupon code\"",
+    "path": [
+     "- main"
+    ],
+    "role": "textbox",
+    "name": "Coupon code",
+    "text": null,
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c24",
+    "step": 0,
+    "type": "appeared",
+    "line": "- strong: $50.00",
+    "path": [
+     "- main",
+     "- paragraph"
+    ],
+    "role": "strong",
+    "name": null,
+    "text": "$50.00",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c26",
+    "step": 0,
+    "type": "appeared",
+    "line": "- dialog \"Cookie consent\":",
+    "path": [],
+    "role": "dialog",
+    "name": "Cookie consent",
+    "text": "",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c27",
+    "step": 0,
+    "type": "appeared",
+    "line": "- paragraph: We use cookies to keep you signed in and to remember your cart.",
+    "path": [
+     "- dialog \"Cookie consent\""
+    ],
+    "role": "paragraph",
+    "name": null,
+    "text": "We use cookies to keep you signed in and to remember your cart.",
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c28",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Accept\"",
+    "path": [
+     "- dialog \"Cookie consent\""
+    ],
+    "role": "button",
+    "name": "Accept",
+    "text": null,
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c29",
+    "step": 0,
+    "type": "appeared",
+    "line": "- button \"Reject non-essential\"",
+    "path": [
+     "- dialog \"Cookie consent\""
+    ],
+    "role": "button",
+    "name": "Reject non-essential",
+    "text": null,
+    "onLoad": true,
+    "inFinal": false,
+    "attended": false,
+    "settleMs": 233,
+    "timeLike": false,
+    "stability": "stable",
+    "score": -2
+   },
+   {
+    "id": "c30",
+    "step": 5,
+    "type": "appeared",
+    "line": "- paragraph: \"Discount (SAVE10-MWB2QKZM 10%): -$5.00\"",
+    "path": [
+     "- main"
+    ],
+    "role": "paragraph",
+    "name": null,
+    "text": "\"Discount (SAVE10-MWB2QKZM 10%): -$5.00\"",
+    "onLoad": false,
+    "inFinal": true,
+    "attended": false,
+    "settleMs": 664,
+    "timeLike": false,
+    "stability": "unstable",
+    "score": -4
+   }
+  ],
+  "divergences": [],
+  "dialogs": [],
+  "overlays": [
+   {
+    "dialog": "- dialog \"Cookie consent\":",
+    "dismissedAt": 1,
+    "using": "getByRole('button', { name: 'Accept', exact: true })"
+   }
+  ],
+  "timeDependent": [],
+  "api": [
+   {
+    "step": 5,
+    "method": "POST",
+    "path": "/api/cart/coupon",
+    "template": "/api/cart/coupon",
+    "status": 200,
+    "requestBody": "{\"code\":\"SAVE10-MWB2QKZM\"}",
+    "responseExcerpt": "{\"lines\":[{\"productId\":1,\"name\":\"Desk Lamp\",\"qty\":1,\"priceCents\":5000,\"lineCents\":5000}],\"subtotalCents\":5000,\"coupon\":{\"code\":\"SAVE10-MWB2QKZM\",\"percent\":10},\"discountCents\":500,\"totalCents\":4500}"
+   }
+  ],
+  "baseline": {
+   "actions": [
+    {
+     "index": 0,
+     "class": "nav",
+     "value": "http://localhost:4101/cart",
+     "optional": null,
+     "nav": "/cart"
+    },
+    {
+     "index": 1,
+     "class": "click",
+     "role": "button",
+     "name": "Accept",
+     "testId": null,
+     "label": null,
+     "optional": "overlay-dismiss",
+     "nav": null
+    },
+    {
+     "index": 3,
+     "class": "input",
+     "role": "textbox",
+     "name": "Coupon code",
+     "testId": null,
+     "label": "Coupon code",
+     "value": "SAVE01",
+     "optional": "superseded-input",
+     "nav": null
+    },
+    {
+     "index": 4,
+     "class": "input",
+     "role": "textbox",
+     "name": "Coupon code",
+     "testId": null,
+     "label": "Coupon code",
+     "value": "SAVE10-MWB2QKZM",
+     "optional": null,
+     "nav": null
+    },
+    {
+     "index": 5,
+     "class": "click",
+     "role": "button",
+     "name": "Apply",
+     "testId": null,
+     "label": null,
+     "optional": null,
+     "nav": null
+    }
+   ],
+   "navigation": [
+    "/cart"
+   ],
+   "mutations": [
+    {
+     "method": "POST",
+     "template": "/api/cart/coupon",
+     "statusClass": "2xx"
+    }
+   ]
+  }
+ },
+ "fidelity": {
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "info": [
+   "dropped optional step 1 (overlay-dismiss): click button \"Accept\"",
+   "dropped optional step 3 (superseded-input): input textbox \"Coupon code\"",
+   "value substituted at recorded step 4: \"SAVE10-MWB2QKZM\" → \"T10-MWB2TW6O6B4C\""
+  ],
+  "stats": {
+   "requiredActions": 3,
+   "matchedRequired": 3,
+   "generatedActions": 3
+  }
+ },
+ "vacuityPlan": {
+  "assertions": [
+   {
+    "order": 0,
+    "afterStep": 2,
+    "kind": "locator",
+    "matcher": "toHaveText",
+    "isNot": false,
+    "args": [
+     "Coupon applied"
+    ],
+    "selector": "internal:role=status",
+    "locator": "getByRole('status')"
+   },
+   {
+    "order": 1,
+    "afterStep": 2,
+    "kind": "locator",
+    "matcher": "toHaveText",
+    "isNot": false,
+    "args": [
+     "$45.00"
+    ],
+    "selector": "internal:testid=[data-testid=\"order-total\"s]",
+    "locator": "getByTestId('order-total')"
+   }
+  ],
+  "values": [
+   {
+    "step": 1,
+    "value": "T10-MWB2TW6O6B4C"
+   }
+  ]
+ },
+ "signatures": [
+  "toHaveText([\"Coupon applied\"])",
+  "toHaveText([\"$45.00\"])"
+ ]
+}

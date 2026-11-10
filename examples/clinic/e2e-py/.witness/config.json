@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "language": "python",
+  "baseURL": "http://localhost:4102",
+  "testDir": "tests",
+  "roles": {
+    "staff": {
+      "storageState": "playwright/.auth/staff.json",
+      "usernameEnv": "CLINIC_STAFF_EMAIL",
+      "passwordEnv": "CLINIC_STAFF_PASSWORD"
+    }
+  },
+  "authSetupCommand": "python -m pytest -q -p no:cacheprovider tests/auth_setup.py",
+  "browser": {
+    "channel": null,
+    "locale": "en-US",
+    "timezoneId": "UTC",
+    "viewport": [
+      1280,
+      800
+    ]
+  },
+  "testIdAttribute": "data-testid",
+  "credentialEnv": [],
+  "verify": {
+    "repeat": 3,
+    "cpuThrottle": 4
+  },
+  "pytestArgs": []
+}

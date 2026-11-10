@@ -1,0 +1,52 @@
+{
+  "app": "shop",
+  "flow": "apply-coupon",
+  "role": "customer",
+  "start": "/cart",
+  "story": "A customer with a $50 Desk Lamp in the cart applies the single-use coupon SAVE10 and checks the 10% discount.",
+  "edgeCases": [
+    "single-use coupon consumed by the recording (409 on replay)",
+    "cookie-consent overlay appears after 300ms",
+    "confirmation toast appears ~600ms after the response",
+    "typo corrected while recording",
+    "codegen click-before-fill",
+    "CSS id selector for the Apply button",
+    "observation clicks on the toast and the total"
+  ],
+  "expect": {
+    "analysis": {
+      "divergences": [
+        {
+          "kind": "state_dependent",
+          "method": "POST",
+          "template": "/api/cart/coupon"
+        }
+      ],
+      "runsFail": true,
+      "optionalSteps": {
+        "overlay-dismiss": 1,
+        "focus-before-input": 1,
+        "superseded-input": 1
+      }
+    },
+    "verify": "pass",
+    "prepared": {
+      "repeatable": true,
+      "optionalSteps": {
+        "observation": 2
+      },
+      "candidatesInclude": [
+        "Coupon applied",
+        "$45.00"
+      ],
+      "delayedEffect": true
+    }
+  },
+  "mutants": {
+    "vacuous": "vacuity",
+    "lock-violation": "lock",
+    "fixed-sleep": "lint",
+    "missing-action": "fidelity",
+    "hardcoded-secret": "secrets"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jmpumuro/witness/schema/evidence.schema.json",
+  "title": "Witness evidence (one test run)",
+  "description": "Written by every runtime's instrumentation (Node shim, Python pytest plugin). Method and matcher names are camelCase in all runtimes so the analysis is shared. Contract between instrumentation and analysis; bump `version` on breaking changes.",
+  "type": "object",
+  "required": ["version", "runtime", "mode", "file", "title", "status", "steps", "assertions", "requests", "dialogs"],
+  "properties": {
+    "version": { "const": 1 },
+    "runtime": { "enum": ["node", "python"] },
+    "mode": { "enum": ["observe", "vacuity", "plain"] },
+    "file": { "type": "string" },
+    "title": { "type": "string" },
+    "repeat": { "type": "integer" },
+    "status": { "enum": ["passed", "failed", "timedOut", "skipped", "interrupted"] },
+    "error": { "type": ["string", "null"] },
+    "origin": { "type": "string", "description": "Origin of the first document request (the app under test)." },
+    "initial": { "type": ["object", "null"], "properties": { "url": { "type": "string" }, "snapshot": { "type": "string" } } },
+    "final": { "type": ["object", "null"], "properties": { "url": { "type": ["string", "null"] }, "snapshot": { "type": "string" } } },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["index", "method", "on"],
+        "properties": {
+          "index": { "type": "integer" },
+          "method": { "enum": ["goto", "reload", "goBack", "goForward", "click", "dblclick", "fill", "press", "pressSequentially", "type", "check", "uncheck", "setChecked", "selectOption", "setInputFiles", "hover", "tap", "dragTo", "clear", "selectText", "dispatchEvent"] },
+          "on": { "enum": ["page", "locator"] },
+          "args": { "type": "array", "description": "Serialized positional arguments; regexes as {\"$regex\", \"flags\"}." },
+          "target": {
+            "type": "object",
+            "properties": {
+              "locator": { "type": "string", "description": "Readable locator in the runtime's language." },
+              "selector": { "type": "string", "description": "Playwright's internal selector." },
+              "role": { "type": ["string", "null"] }, "name": { "type": ["string", "null"] }, "text": { "type": ["string", "null"] },
+              "ariaLine": { "type": "string" }, "inMainFrame": { "type": "boolean" }, "unresolved": { "type": "boolean" },
+              "attrs": { "type": "object" },
+              "candidates": {
+                "type": "array",
+                "items": { "type": "object", "required": ["kind", "code"], "properties": {
+                  "kind": { "enum": ["role", "label", "placeholder", "testid", "text", "scoped-role"] },
+                  "code": { "type": "string" }, "count": { "type": "integer" }, "matchesTarget": { "type": "boolean" }, "index": { "type": "integer" } } }
+              }
+            }
+          },
+          "urlBefore": { "type": "string" }, "urlAfter": { "type": "string" },
+          "snapshotBefore": { "type": "string", "description": "Accessibility (aria) snapshot of the page body." },
+          "snapshotAfter": { "type": "string" },
+          "added": { "$ref": "#/$defs/lines" }, "removed": { "$ref": "#/$defs/lines" },
+          "settleMs": { "type": "integer", "description": "Time until the page stopped changing after the action." },
+          "error": { "type": "string" }
+        }
+      }
+    },
+    "assertions": {
+      "type": "array",
+      "items": { "type": "object", "required": ["order", "afterStep", "matcher", "isNot", "kind"], "properties": {
+        "order": { "type": "integer" }, "afterStep": { "type": "integer" }, "matcher": { "type": "string" }, "pyMatcher": { "type": "string" },
+        "isNot": { "type": "boolean" }, "kind": { "enum": ["locator", "page", "value"] }, "args": { "type": "array" }, "kwargs": { "type": "object" },
+        "locator": { "type": ["string", "null"] }, "selector": { "type": ["string", "null"] }, "passed": { "type": "boolean" } } }
+    },
+    "requests": {
+      "type": "array",
+      "items": { "type": "object", "required": ["method", "path", "resourceType", "sameOrigin"], "properties": {
+        "method": { "type": "string" }, "path": { "type": "string" }, "resourceType": { "type": "string" }, "sameOrigin": { "type": "boolean" },
+        "step": { "type": ["integer", "null"] }, "status": { "type": "integer" }, "failure": { "type": "string" },
+        "postData": { "type": "string", "description": "Redacted." }, "responseExcerpt": { "type": "string", "description": "Redacted." } } }
+    },
+    "dialogs": { "type": "array", "items": { "type": "object", "properties": { "step": { "type": ["integer", "null"] }, "type": { "type": "string" }, "message": { "type": "string" } } } },
+    "vacuity": { "type": "array", "items": { "type": "object", "properties": { "order": { "type": "integer" }, "checked": { "type": "boolean" }, "passedBeforeAction": { "type": "boolean" } } } }
+  },
+  "$defs": {
+    "lines": { "type": "array", "items": { "type": "object", "required": ["line", "path"], "properties": { "line": { "type": "string" }, "path": { "type": "array", "items": { "type": "string" } } } } }
+  }
+}
