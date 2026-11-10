@@ -57,6 +57,11 @@ export function regexFor(s) {
   return esc.replace(/\d+/g, '\\d+');
 }
 
+/** Remove the routeFromHAR call codegen adds with --save-har: replays must hit the live app, not the HAR. */
+export function stripHarReplay(src) {
+  return String(src).replace(/^[ \t]*(?:await[ \t]+)?(?:page|context)\.routeFromHAR\([\s\S]*?\);[ \t]*\r?\n/gm, '');
+}
+
 export function run(cmd, args, opts = {}) {
   return new Promise((resolve) => {
     const child = spawn(cmd, args, { ...opts, stdio: ['ignore', 'pipe', 'pipe'], shell: opts.shell ?? process.platform === 'win32' });

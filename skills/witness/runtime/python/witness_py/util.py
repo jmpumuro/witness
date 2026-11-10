@@ -83,6 +83,11 @@ def regex_for(s: str) -> str:
     return re.sub(r"\d+", r"\\d+", esc)
 
 
+def strip_har_replay(src: str) -> str:
+    """Remove the route_from_har call codegen adds with --save-har: replays must hit the live app, not the HAR."""
+    return re.sub(r"^[ \t]*(?:await[ \t]+)?(?:page|context)\.route_from_har\([^\n]*\)[ \t]*\r?\n", "", str(src), flags=re.M)
+
+
 def run(cmd: list[str] | str, cwd: str | Path, env: dict | None = None, timeout: int | None = None, shell: bool = False) -> tuple[int, str]:
     try:
         r = subprocess.run(cmd, cwd=str(cwd), env=env, capture_output=True, text=True, timeout=timeout, shell=shell)

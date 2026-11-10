@@ -6,7 +6,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildAnalysis } from '../lib/analysis.mjs';
 import { compareFidelity, vacuityPlan, assertionSignature } from '../lib/verify.mjs';
-import { templatePath, regexFor } from '../lib/util.mjs';
+import { templatePath, regexFor, stripHarReplay } from '../lib/util.mjs';
 
 const VECTORS = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..', 'conformance', 'vectors');
 const normalize = (x) => JSON.parse(JSON.stringify(x));
@@ -35,4 +35,25 @@ test('templatePath replaces id-like segments', () => {
 test('regexFor turns numbers into \\d+', () => {
   assert.equal(regexFor('Order #1042 confirmed'), 'Order #\\d+ confirmed');
   assert.equal(regexFor('$45.00'), '\\$\\d+\\.\\d+');
+});
+
+test('stripHarReplay removes the routeFromHAR call codegen adds with --save-har', () => {
+  const raw = [
+    "test('test', async ({ page }) => {",
+    "  await page.routeFromHAR('/x/network.har', {",
+    "    url: 'http://localhost:4101/**'",
+    '  });',
+    "  await page.goto('http://localhost:4101/cart');",
+    "  await context.routeFromHAR('/x/network.har');",
+    "  await page.getByRole('button', { name: 'Apply' }).click();",
+    '});',
+    '',
+  ].join('\n');
+  assert.equal(stripHarReplay(raw), [
+    "test('test', async ({ page }) => {",
+    "  await page.goto('http://localhost:4101/cart');",
+    "  await page.getByRole('button', { name: 'Apply' }).click();",
+    '});',
+    '',
+  ].join('\n'));
 });

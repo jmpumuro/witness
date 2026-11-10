@@ -9,7 +9,7 @@
       "name": "witness",
       "source": "./",
       "description": "Record a flow by hand in the browser; get a verified, repeatable Playwright test (TypeScript or Python).",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "category": "testing",
       "keywords": ["playwright", "codegen", "record and replay", "e2e", "integration tests", "pytest-playwright"]
     }

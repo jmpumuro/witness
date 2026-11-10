@@ -25,7 +25,7 @@ from .analysis import analysis_summary, build_analysis
 from .config import DEFAULT_CONFIG, Paths, credential_values, ensure_gitignore, load_config, role_storage
 from .har import read_har
 from .runner import run_spec
-from .util import git_info, log, now_iso, read_json, rel, run, stamp, write_json
+from .util import git_info, log, now_iso, read_json, rel, run, stamp, strip_har_replay, write_json
 from .verify import assertion_signature, compare_fidelity, lint, lock_check, secret_scan, vacuity_plan, vacuity_results
 
 PROJECT = Path.cwd()
@@ -213,7 +213,9 @@ def cmd_record(a: argparse.Namespace) -> int:
         meta["status"] = "abandoned"
         write_json(d / "meta.json", meta)
         raise WitnessError(f"no recording was saved (codegen exit {code}). Run the command again to retry.")
-    actions = len(re.findall(r"^\s+page\.", spec.read_text(encoding="utf-8"), re.M))
+    source = strip_har_replay(spec.read_text(encoding="utf-8"))
+    spec.write_text(source, encoding="utf-8")
+    actions = len(re.findall(r"^\s+page\.", source, re.M))
     meta.update(status="recorded", recordedEndedAt=now_iso())
     write_json(d / "meta.json", meta)
     fm = new_version(flow, meta)
@@ -232,6 +234,9 @@ def cmd_import(a: argparse.Namespace) -> int:
     if a.replace:
         archive_existing(flow)
     shutil.copytree(src, d)
+    raw = d / "raw_test.py"
+    if raw.exists():
+        raw.write_text(strip_har_replay(raw.read_text(encoding="utf-8")), encoding="utf-8")
     meta = {"flow": flow, "role": a.role or "none", "start": a.start or "/", "baseURL": cfg["baseURL"], "language": "python",
             "recordedAt": now_iso(), **git_info(PROJECT), **read_json(d / "meta.json", {}), "status": "recorded", "imported": True}
     if a.role:

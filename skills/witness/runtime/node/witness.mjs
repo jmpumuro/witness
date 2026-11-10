@@ -14,7 +14,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
-import { readJSON, writeJSON, exists, stamp, gitInfo, copyDir, run, log, rel } from './lib/util.mjs';
+import { readJSON, writeJSON, exists, stamp, gitInfo, copyDir, run, log, rel, stripHarReplay } from './lib/util.mjs';
 import { loadConfig, projectPaths, roleStorage, credentialValues, ensureGitignore, DEFAULT_CONFIG } from './lib/config.mjs';
 import { readHar } from './lib/har.mjs';
 import { runSpec, projectTestDirs } from './lib/runner.mjs';
@@ -187,7 +187,9 @@ async function cmdRecord(args) {
   });
   const spec = path.join(dir, 'raw.spec.ts');
   if (!exists(spec)) { meta.status = 'abandoned'; writeJSON(path.join(dir, 'meta.json'), meta); fail(`no recording was saved (codegen exit ${code}). Run the command again to retry.`, 1); }
-  const actions = (fs.readFileSync(spec, 'utf8').match(/await page/g) || []).length;
+  const source = stripHarReplay(fs.readFileSync(spec, 'utf8'));
+  fs.writeFileSync(spec, source);
+  const actions = (source.match(/await page/g) || []).length;
   meta.status = 'recorded';
   meta.recordedEndedAt = new Date().toISOString();
   writeJSON(path.join(dir, 'meta.json'), meta);
@@ -204,6 +206,8 @@ async function cmdImport(args) {
   const cfg = loadConfig(projectDir);
   if (args.replace) archiveExisting(flow);
   copyDir(src, dir);
+  const rawSpec = path.join(dir, 'raw.spec.ts');
+  if (exists(rawSpec)) fs.writeFileSync(rawSpec, stripHarReplay(fs.readFileSync(rawSpec, 'utf8')));
   const meta = { flow, role: args.role || 'none', start: args.start || '/', baseURL: cfg.baseURL, language: 'typescript', recordedAt: new Date().toISOString(), ...gitInfo(projectDir), ...readJSON(path.join(dir, 'meta.json'), {}), status: 'recorded', imported: true };
   if (args.role) meta.role = args.role;
   writeJSON(path.join(dir, 'meta.json'), meta);

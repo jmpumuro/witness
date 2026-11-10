@@ -7,7 +7,7 @@ from pathlib import Path
 import pytest
 
 from witness_py.analysis import build_analysis
-from witness_py.util import regex_for, template_path
+from witness_py.util import regex_for, strip_har_replay, template_path
 from witness_py.verify import assertion_signature, compare_fidelity, vacuity_plan
 
 VECTORS = Path(__file__).resolve().parents[2] / "conformance" / "vectors"
@@ -49,3 +49,18 @@ def test_template_path() -> None:
 def test_regex_for() -> None:
     assert regex_for("Order #1042 confirmed") == r"Order #\d+ confirmed"
     assert regex_for("$45.00") == r"\$\d+\.\d+"
+
+
+def test_strip_har_replay() -> None:
+    raw = (
+        "def test_example(page: Page) -> None:\n"
+        '    page.route_from_har("/x/network.har", url="http://localhost:4101/**")\n'
+        '    page.goto("http://localhost:4101/cart")\n'
+        '    context.route_from_har("/x/network.har")\n'
+        '    page.get_by_role("button", name="Apply").click()\n'
+    )
+    assert strip_har_replay(raw) == (
+        "def test_example(page: Page) -> None:\n"
+        '    page.goto("http://localhost:4101/cart")\n'
+        '    page.get_by_role("button", name="Apply").click()\n'
+    )
